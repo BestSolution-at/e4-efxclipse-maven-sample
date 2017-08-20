@@ -1,18 +1,19 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>sample.mvn</groupId>
-    <artifactId>sample.mvn.parent</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
-  <groupId>sample.mvn.app</groupId>
-  <artifactId>sample.mvn.app</artifactId>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>sample.mvn</groupId>
+		<artifactId>sample.mvn.parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<groupId>sample.mvn.app</groupId>
+	<artifactId>sample.mvn.app</artifactId>
 
-  <properties>
-  	<efxclipse.version>3.0.0-SNAPSHOT</efxclipse.version>
-  </properties>
+	<properties>
+		<efxclipse.version>3.0.0</efxclipse.version>
+	</properties>
 
-  <dependencies>
+	<dependencies>
 		<dependency>
 			<groupId>org.osgi</groupId>
 			<artifactId>org.osgi.service.component.annotations</artifactId>
@@ -383,7 +384,35 @@
 		<dependency>
 			<groupId>at.bestsolution.efxclipse.eclipse</groupId>
 			<artifactId>com.google.guava</artifactId>
-			<version>15.0.0</version>
+			<version>21.0.0</version>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.fx.ide.mvnosgi</groupId>
+				<artifactId>mvnosgi-maven-plugin</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+				<configuration>
+					<programArguments>
+						<programArgument>-console</programArgument>
+						<programArgument>-console-log</programArgument>
+						<programArgument>-product</programArgument>
+						<programArgument>sample.mvn.app.product</programArgument>
+					</programArguments>
+					<vmArguments>
+						<org.osgi.framework.bundle.parent>ext</org.osgi.framework.bundle.parent>
+					</vmArguments>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>osgi-launcher</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>
