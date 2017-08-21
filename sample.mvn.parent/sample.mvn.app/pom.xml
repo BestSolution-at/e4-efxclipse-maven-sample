@@ -20,6 +20,11 @@
 			<version>1.3.0</version>
 			<scope>compile</scope>
 		</dependency>
+		<dependency>
+			<groupId>sample.mvn</groupId>
+			<artifactId>sample.mvn.lib</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 		<!-- TODO We need to feature.xml => pom translation -->
 		<dependency>
 			<groupId>at.bestsolution.efxclipse.rt</groupId>
@@ -397,9 +402,10 @@
 				<configuration>
 					<programArguments>
 						<programArgument>-console</programArgument>
-						<programArgument>-console-log</programArgument>
+						<programArgument>-consoleLog</programArgument>
 						<programArgument>-product</programArgument>
 						<programArgument>sample.mvn.app.product</programArgument>
+						<programArgument>-noexit</programArgument>
 					</programArguments>
 					<vmArguments>
 						<org.osgi.framework.bundle.parent>ext</org.osgi.framework.bundle.parent>
@@ -407,8 +413,9 @@
 				</configuration>
 				<executions>
 					<execution>
+						<phase>test</phase>
 						<goals>
-							<goal>osgi-launcher</goal>
+							<goal>exec-osgi</goal>
 						</goals>
 					</execution>
 				</executions>
