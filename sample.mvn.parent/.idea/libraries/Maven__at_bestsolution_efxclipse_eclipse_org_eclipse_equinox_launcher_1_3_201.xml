@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: at.bestsolution.efxclipse.eclipse:org.eclipse.equinox.launcher:1.3.201">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/eclipse/org.eclipse.equinox.launcher/1.3.201/org.eclipse.equinox.launcher-1.3.201.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/eclipse/org.eclipse.equinox.launcher/1.3.201/org.eclipse.equinox.launcher-1.3.201-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/eclipse/org.eclipse.equinox.launcher/1.3.201/org.eclipse.equinox.launcher-1.3.201-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -405,21 +405,55 @@
 						<programArgument>-consoleLog</programArgument>
 						<programArgument>-product</programArgument>
 						<programArgument>sample.mvn.app.product</programArgument>
-						<programArgument>-noexit</programArgument>
 					</programArguments>
 					<vmArguments>
 						<org.osgi.framework.bundle.parent>ext</org.osgi.framework.bundle.parent>
 					</vmArguments>
 				</configuration>
-				<executions>
-					<execution>
-						<phase>test</phase>
-						<goals>
-							<goal>exec-osgi</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
 		</plugins>
 	</build>
+
+	<profiles>
+		<profile>
+			<id>netbeans</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.eclipse.fx.ide.mvnosgi</groupId>
+						<artifactId>mvnosgi-maven-plugin</artifactId>
+						<version>0.0.1-SNAPSHOT</version>
+						<executions>
+							<execution>
+								<phase>test</phase>
+								<goals>
+									<goal>exec-osgi</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>intellij</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.eclipse.fx.ide.mvnosgi</groupId>
+						<artifactId>mvnosgi-maven-plugin</artifactId>
+						<version>0.0.1-SNAPSHOT</version>
+						<executions>
+							<execution>
+								<phase>test</phase>
+								<goals>
+									<goal>exec-osgi-java</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 </project>

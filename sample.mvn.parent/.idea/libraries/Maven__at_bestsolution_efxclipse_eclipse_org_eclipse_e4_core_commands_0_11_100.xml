@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: at.bestsolution.efxclipse.eclipse:org.eclipse.e4.core.commands:0.11.100">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/eclipse/org.eclipse.e4.core.commands/0.11.100/org.eclipse.e4.core.commands-0.11.100.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/eclipse/org.eclipse.e4.core.commands/0.11.100/org.eclipse.e4.core.commands-0.11.100-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/eclipse/org.eclipse.e4.core.commands/0.11.100/org.eclipse.e4.core.commands-0.11.100-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

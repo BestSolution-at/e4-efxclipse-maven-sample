@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: at.bestsolution.efxclipse.eclipse:org.eclipse.e4.ui.model.workbench:1.2.0">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/eclipse/org.eclipse.e4.ui.model.workbench/1.2.0/org.eclipse.e4.ui.model.workbench-1.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/eclipse/org.eclipse.e4.ui.model.workbench/1.2.0/org.eclipse.e4.ui.model.workbench-1.2.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/eclipse/org.eclipse.e4.ui.model.workbench/1.2.0/org.eclipse.e4.ui.model.workbench-1.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
