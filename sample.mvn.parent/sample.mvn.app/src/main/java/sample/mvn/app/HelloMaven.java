@@ -10,13 +10,13 @@ import sample.mvn.lib.HelloWorldHelper;
 public class HelloMaven {
 	@PostConstruct
 	void init(BorderPane p) {
-            Button b = new Button("Hello Maven!");
-            b.setOnAction( this::handleButtonAction );
-            p.setCenter(b);
+		Button b = new Button("Hello Maven!");
+		b.setOnAction(this::handleButtonAction);
+		p.setCenter(b);
 	}
-        
-        void handleButtonAction(ActionEvent e) {
-            System.err.println("Action: " + e);
-            HelloWorldHelper.helloWorld();
-        }
+
+	void handleButtonAction(ActionEvent e) {
+		System.err.println("Action: " + e);
+		HelloWorldHelper.helloWorld();
+	}
 }
