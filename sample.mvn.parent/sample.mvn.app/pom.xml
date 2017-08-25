@@ -396,8 +396,8 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.eclipse.fx.ide.mvnosgi</groupId>
-				<artifactId>mvnosgi-maven-plugin</artifactId>
+				<groupId>at.bestsolution</groupId>
+				<artifactId>maven-osgi-plugin</artifactId>
 				<version>0.0.1-SNAPSHOT</version>
 				<configuration>
 					<programArguments>
@@ -406,9 +406,12 @@
 						<programArgument>-product</programArgument>
 						<programArgument>sample.mvn.app.product</programArgument>
 					</programArguments>
-					<vmArguments>
-						<org.osgi.framework.bundle.parent>ext</org.osgi.framework.bundle.parent>
-					</vmArguments>
+					<vmProperties>
+						<property>
+							<name>org.osgi.framework.bundle.parent</name>
+							<value>ext</value>
+						</property>
+					</vmProperties>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -420,9 +423,9 @@
 			<build>
 				<plugins>
 					<plugin>
-						<groupId>org.eclipse.fx.ide.mvnosgi</groupId>
-						<artifactId>mvnosgi-maven-plugin</artifactId>
-						<version>0.0.1-SNAPSHOT</version>
+						<groupId>at.bestsolution</groupId>
+                                                <artifactId>maven-osgi-plugin</artifactId>
+                                                <version>0.0.1-SNAPSHOT</version>
 						<executions>
 							<execution>
 								<phase>test</phase>
@@ -440,9 +443,9 @@
 			<build>
 				<plugins>
 					<plugin>
-						<groupId>org.eclipse.fx.ide.mvnosgi</groupId>
-						<artifactId>mvnosgi-maven-plugin</artifactId>
-						<version>0.0.1-SNAPSHOT</version>
+						<groupId>at.bestsolution</groupId>
+                                                <artifactId>maven-osgi-plugin</artifactId>
+                                                <version>0.0.1-SNAPSHOT</version>
 						<executions>
 							<execution>
 								<phase>test</phase>
