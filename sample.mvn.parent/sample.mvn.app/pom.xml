@@ -6,7 +6,6 @@
 		<artifactId>sample.mvn.parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>sample.mvn.app</groupId>
 	<artifactId>sample.mvn.app</artifactId>
 
 	<properties>
