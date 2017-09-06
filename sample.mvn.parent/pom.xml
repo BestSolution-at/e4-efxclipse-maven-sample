@@ -6,9 +6,16 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
+	<properties>
+		<osgi.qualifier>${maven.build.timestamp}</osgi.qualifier>
+		<maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
+	</properties>
+
 	<modules>
 		<module>sample.mvn.app</module>
 		<module>sample.mvn.lib</module>
+		<module>sample.mvn.product</module>
+		<module>sample.mvn.runtime.e4fx.feature</module>
 	</modules>
 
 	<repositories>
@@ -55,9 +62,9 @@
 				</configuration>
 			</plugin>
 
-			<!-- The following configuration is required because bnd-maven-plugin
-				generates the manifest to target/classes/META-INF/MANIFEST.MF but the normal
-				maven-jar-plugin does not use it. If the jar-plugin is patched to pick up
+			<!-- The following configuration is required because bnd-maven-plugin 
+				generates the manifest to target/classes/META-INF/MANIFEST.MF but the normal 
+				maven-jar-plugin does not use it. If the jar-plugin is patched to pick up 
 				the manifest from this location, then the following config is not needed. -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -69,10 +76,10 @@
 					</archive>
 				</configuration>
 			</plugin>
-			<!-- plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-source-plugin</artifactId>
-				<executions> <execution> <id>attach-sources</id> <goals> <goal>jar</goal>
-				</goals> </execution> </executions> </plugin> <plugin> <groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId> <executions> <execution> <id>attach-javadocs</id>
+			<!-- plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-source-plugin</artifactId> 
+				<executions> <execution> <id>attach-sources</id> <goals> <goal>jar</goal> 
+				</goals> </execution> </executions> </plugin> <plugin> <groupId>org.apache.maven.plugins</groupId> 
+				<artifactId>maven-javadoc-plugin</artifactId> <executions> <execution> <id>attach-javadocs</id> 
 				<goals> <goal>jar</goal> </goals> </execution> </executions> </plugin -->
 		</plugins>
 	</build>

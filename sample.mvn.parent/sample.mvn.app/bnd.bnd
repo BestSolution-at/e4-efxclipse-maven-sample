@@ -1,3 +1,4 @@
+-snapshot: ${osgi.qualifier}
 Bundle-SymbolicName: sample.mvn.app;singleton:=true
 Bundle-ActivationPolicy: lazy
 

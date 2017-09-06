@@ -9,7 +9,7 @@ import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.component.annotations.ReferenceCardinality;
 import org.osgi.service.component.annotations.ReferencePolicy;
 
-@Component
+@Component(xmlns = "http://www.osgi.org/xmlns/scr/v1.2.0")
 public class DefaultTheme extends AbstractTheme implements Theme {
 
 	public DefaultTheme() {
