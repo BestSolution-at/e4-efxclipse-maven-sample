@@ -8,13 +8,69 @@
 	</parent>
 	<groupId>sample.mvn.product</groupId>
 	<artifactId>sample.mvn.product</artifactId>
-	<packaging>pom</packaging>
+	<packaging>eclipse-repository</packaging>
+	
+	<repositories>
+		<repository>
+			<id>app-repo</id>
+			<layout>p2</layout>
+			<url>file:${project.basedir}/../sample.mvn.repo/target/source-repository</url>
+		</repository>
 
-	<dependencies>
-		<dependency>
-			<groupId>sample.mvn</groupId>
-			<artifactId>sample.mvn.app</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-	</dependencies>
+	</repositories>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>biz.aQute.bnd</groupId>
+				<artifactId>bnd-maven-plugin</artifactId>
+				<version>3.4.0</version>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>1.0.0</version>
+				<extensions>true</extensions>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>1.0.0</version>
+				<configuration>
+					<resolver>p2</resolver>
+					<pomDependencies>consider</pomDependencies>
+					<environments>
+						<environment>
+							<os>noenv</os>
+							<ws>noenv</ws>
+							<arch>noenv</arch>
+						</environment>
+					</environments>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-p2-director-plugin</artifactId>
+				<version>1.0.0</version>
+				<executions>
+					<execution>
+						<id>materialize-products</id>
+						<goals>
+							<goal>materialize-products</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>archive-products</id>
+						<goals>
+							<goal>archive-products</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>

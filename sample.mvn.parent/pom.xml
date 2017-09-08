@@ -14,8 +14,11 @@
 	<modules>
 		<module>sample.mvn.app</module>
 		<module>sample.mvn.lib</module>
-		<module>sample.mvn.product</module>
 		<module>sample.mvn.runtime.e4fx.feature</module>
+		<module>sample.mvn.feature</module>
+		<module>sample.mvn.repo</module>
+		<!-- module>sample.mvn.product</module -->
+		
 	</modules>
 
 	<repositories>
