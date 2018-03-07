@@ -46,7 +46,6 @@
 					<plugin>
 						<groupId>at.bestsolution</groupId>
 						<artifactId>maven-osgi-exec-plugin</artifactId>
-						<version>0.0.2-SNAPSHOT</version>
 						<executions>
 							<execution>
 								<phase>process-classes</phase>
@@ -78,7 +77,6 @@
 			<plugin>
 				<groupId>at.bestsolution</groupId>
 				<artifactId>maven-osgi-exec-plugin</artifactId>
-				<version>0.0.2-SNAPSHOT</version>
 				<configuration>
 					<programArguments>
 						<programArgument>-console</programArgument>
