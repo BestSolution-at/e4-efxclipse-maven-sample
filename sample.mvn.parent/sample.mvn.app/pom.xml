@@ -36,10 +36,6 @@
 			<plugin>
 				<groupId>at.bestsolution</groupId>
 				<artifactId>maven-osgi-exec-plugin</artifactId>
-<<<<<<< HEAD
-				<version>0.0.2-SNAPSHOT</version>
-=======
->>>>>>> prepare_pullrequest
 				<configuration>
 					<programArguments>
 						<programArgument>-console</programArgument>
@@ -74,10 +70,6 @@
 					<plugin>
 						<groupId>at.bestsolution</groupId>
 						<artifactId>maven-osgi-exec-plugin</artifactId>
-<<<<<<< HEAD
-						<version>0.0.2-SNAPSHOT</version>
-=======
->>>>>>> prepare_pullrequest
 						<executions>
 							<execution>
 								<phase>test</phase>
@@ -97,10 +89,6 @@
 					<plugin>
 						<groupId>at.bestsolution</groupId>
 						<artifactId>maven-osgi-exec-plugin</artifactId>
-<<<<<<< HEAD
-						<version>0.0.2-SNAPSHOT</version>
-=======
->>>>>>> prepare_pullrequest
 						<executions>
 							<execution>
 								<phase>test</phase>
