@@ -10,7 +10,7 @@
 
 	<properties>
 		<efxclipse.version>3.0.0</efxclipse.version>
-		<efxclipse.update.site>http://artifactory-medmuc:8084/artifactory/efxclipse-runtime-released/3.0.0/site</efxclipse.update.site>
+		<efxclipse.update.site>http://download.eclipse.org/efxclipse/runtime-released/3.0.0/site</efxclipse.update.site>
         <!-- possible configuration properties for the dependency extension -->
         <!--
 
