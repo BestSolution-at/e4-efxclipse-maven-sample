@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
@@ -7,10 +8,6 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>sample.mvn.app</artifactId>
-
-	<properties>
-		<efxclipse.version>3.0.0</efxclipse.version>
-	</properties>
 
 	<dependencies>
 		<dependency>
@@ -25,9 +22,9 @@
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>sample.mvn</groupId>
-			<artifactId>sample.mvn.runtime.e4fx.feature</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<groupId>at.bestsolution.efxclipse.rt</groupId>
+			<artifactId>org.eclipse.fx.runtime.e4fx.feature</artifactId>
+			<version>${efx-org.eclipse.fx.runtime.e4fx.feature.feature.group}</version>
 		</dependency>
 	</dependencies>
 
@@ -42,6 +39,8 @@
 						<programArgument>-consoleLog</programArgument>
 						<programArgument>-product</programArgument>
 						<programArgument>sample.mvn.app.product</programArgument>
+						<programArgument>-clearPersistedState</programArgument>
+						<programArgument>-clean</programArgument>
 					</programArguments>
 					<vmProperties>
 						<property>

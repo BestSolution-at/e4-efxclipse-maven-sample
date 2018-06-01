@@ -1,10 +1,17 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>sample.mvn</groupId>
 	<artifactId>sample.mvn.parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
+
+	<parent>
+		<groupId>at.bestsolution.efxclipse.rt</groupId>
+		<artifactId>at.bestsolution.efxclipse.rt.release</artifactId>
+		<version>3.3.0</version>
+	</parent>
 
 	<properties>
 		<osgi.qualifier>${maven.build.timestamp}</osgi.qualifier>
@@ -14,10 +21,9 @@
 	<modules>
 		<module>sample.mvn.app</module>
 		<module>sample.mvn.lib</module>
-		<module>sample.mvn.runtime.e4fx.feature</module>
 		<module>sample.mvn.feature</module>
 		<module>sample.mvn.product</module>
-		
+
 	</modules>
 
 

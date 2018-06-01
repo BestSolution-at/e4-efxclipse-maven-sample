@@ -30,9 +30,9 @@
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>sample.mvn</groupId>
-			<artifactId>sample.mvn.runtime.e4fx.feature</artifactId>
-			<version>${project.version}</version>
+			<groupId>at.bestsolution.efxclipse.rt</groupId>
+			<artifactId>org.eclipse.fx.runtime.e4fx.feature</artifactId>
+			<version>${efx-org.eclipse.fx.runtime.e4fx.feature.feature.group}</version>
 		</dependency>
 	</dependencies>
 
