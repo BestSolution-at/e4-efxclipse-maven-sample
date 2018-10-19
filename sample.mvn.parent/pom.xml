@@ -10,7 +10,7 @@
 	<parent>
 		<groupId>at.bestsolution.efxclipse.rt</groupId>
 		<artifactId>at.bestsolution.efxclipse.rt.release</artifactId>
-		<version>3.4.1</version>
+		<version>3.5.0-SNAPSHOT</version>
 	</parent>
 
 	<properties>
@@ -83,8 +83,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.0</version>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<source>11</source>
+					<target>11</target>
 				</configuration>
 			</plugin>
 
@@ -95,7 +95,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
-				<version>2.6</version>
+				<version>3.1.0</version>
 				<configuration>
 					<archive>
 						<manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
@@ -109,4 +109,40 @@
 				<goals> <goal>jar</goal> </goals> </execution> </executions> </plugin -->
 		</plugins>
 	</build>
+
+	<profiles>
+		<profile>
+			<id>linux</id>
+			<activation>
+				<os>
+					<name>linux</name>
+				</os>
+			</activation>
+			<properties>
+				<efx.platform>linux_64</efx.platform>
+			</properties>
+		</profile>
+		<profile>
+			<id>macosx</id>
+			<activation>
+				<os>
+					<name>mac os x</name>
+				</os>
+			</activation>
+			<properties>
+				<efx.platform>mac</efx.platform>
+			</properties>
+		</profile>
+		<profile>
+			<id>windows</id>
+			<activation>
+				<os>
+					<family>windows</family>
+				</os>
+			</activation>
+			<properties>
+				<efx.platform>win32_64</efx.platform>
+			</properties>
+		</profile>
+	</profiles>
 </project>

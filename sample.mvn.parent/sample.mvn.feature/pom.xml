@@ -19,6 +19,36 @@
 			<artifactId>sample.mvn.lib</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>at.bestsolution.efxclipse.rt</groupId>
+			<artifactId>org.eclipse.fx.osgi</artifactId>
+			<version>${efx-org.eclipse.fx.osgi}</version>
+		</dependency>
+		<dependency>
+			<groupId>at.bestsolution.openjfx</groupId>
+			<version>11.0.0</version>
+			<artifactId>openjfx.base</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>at.bestsolution.openjfx</groupId>
+			<version>11.0.0</version>
+			<artifactId>openjfx.controls</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>at.bestsolution.openjfx</groupId>
+			<version>11.0.0</version>
+			<artifactId>openjfx.graphics.mac</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>at.bestsolution.openjfx</groupId>
+			<version>11.0.0</version>
+			<artifactId>openjfx.graphics.win32_64</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>at.bestsolution.openjfx</groupId>
+			<version>11.0.0</version>
+			<artifactId>openjfx.graphics.linux_64</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>

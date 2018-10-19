@@ -1,3 +1,4 @@
+-noee: true
 -snapshot: ${osgi.qualifier}
 Bundle-ActivationPolicy: lazy
 

@@ -23,9 +23,35 @@
 		</dependency>
 		<dependency>
 			<groupId>at.bestsolution.efxclipse.rt</groupId>
+			<artifactId>org.eclipse.fx.osgi</artifactId>
+			<version>${efx-org.eclipse.fx.osgi}</version>
+		</dependency>
+		<dependency>
+			<groupId>at.bestsolution.efxclipse.rt</groupId>
 			<artifactId>org.eclipse.fx.runtime.e4fx.feature</artifactId>
 			<version>${efx-org.eclipse.fx.runtime.e4fx.feature.feature.group}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.openjfx</groupId>
+  			<artifactId>javafx-controls</artifactId>
+  			<version>11</version>
+		</dependency>
+		<dependency>
+			<groupId>at.bestsolution.openjfx</groupId>
+			<version>11.0.0</version>
+			<artifactId>openjfx.base</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>at.bestsolution.openjfx</groupId>
+			<version>11.0.0</version>
+			<artifactId>openjfx.controls</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>at.bestsolution.openjfx</groupId>
+			<version>11.0.0</version>
+			<artifactId>openjfx.graphics.${efx.platform}</artifactId>
+		</dependency>
+		
 	</dependencies>
 
 	<build>
@@ -44,8 +70,12 @@
 					</programArguments>
 					<vmProperties>
 						<property>
-							<name>org.osgi.framework.bundle.parent</name>
-							<value>ext</value>
+							<name>osgi.framework.extensions</name>
+							<value>org.eclipse.fx.osgi</value>
+						</property>
+						<property>
+							<name>efxclipse.osgi.hook.debug</name>
+							<value>true</value>
 						</property>
 					</vmProperties>
 					<startLevels>

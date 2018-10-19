@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
@@ -73,7 +74,7 @@
 				</configuration>
 			</plugin>
 
-			<!-- Creates a product file which is used by Tycho to build configurations
+			<!-- Creates a product file which is used by Tycho to build configurations 
 				used for the startable product -->
 			<plugin>
 				<groupId>at.bestsolution</groupId>
@@ -85,8 +86,8 @@
 							<goal>package-product</goal>
 						</goals>
 						<configuration>
-							<!-- TODO: Build directory can not yet be used because there is no
-								option known to say Tycho that the .product file is not in the project root
+							<!-- TODO: Build directory can not yet be used because there is no 
+								option known to say Tycho that the .product file is not in the project root 
 								directory -->
 							<!--<projectDir>${project.build.directory}</projectDir> -->
 							<product>
@@ -106,6 +107,18 @@
 											<name>org.osgi.framework.bundle.parent</name>
 											<value>ext</value>
 										</property>
+										<property>
+											<name>efxclipse.java-modules.dir</name>
+											<value>/Users/tomschindl/Downloads/javafx-sdk-11/lib</value>
+										</property>
+										<property>
+											<name>osgi.framework.extensions</name>
+											<value>org.eclipse.fx.osgi</value>
+										</property>
+										<property>
+											<name>efxclipse.osgi.hook.debug</name>
+											<value>true</value>
+										</property>
 									</vmProperties>
 								</launcherArgs>
 								<startLevels>
@@ -116,14 +129,14 @@
 									<org.eclipse.equinox.simpleconfigurator>1</org.eclipse.equinox.simpleconfigurator>
 									<org.eclipse.osgi>-1</org.eclipse.osgi>
 									<org.eclipse.gemini.blueprint.extender>3</org.eclipse.gemini.blueprint.extender>
-									<!-- TODO: this is still ugly. Need a better way to mark the bundle
+									<!-- TODO: this is still ugly. Need a better way to mark the bundle 
 										as "to start" -->
 									<service-impl>4</service-impl>
 								</startLevels>
 							</product>
 						</configuration>
 					</execution>
-					<!-- Generates the p2-repository which is used by the tycho plugins
+					<!-- Generates the p2-repository which is used by the tycho plugins 
 						below -->
 					<execution>
 						<id>create-p2-repo</id>
@@ -140,19 +153,19 @@
 			</plugin>
 
 
-			<!-- Tycho stuff to materializes the product in the structure that is
+			<!-- Tycho stuff to materializes the product in the structure that is 
 				startable for a certain environment -->
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-maven-plugin</artifactId>
-				<version>1.0.0</version>
+				<version>1.2.0</version>
 				<extensions>true</extensions>
 			</plugin>
 
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>target-platform-configuration</artifactId>
-				<version>1.0.0</version>
+				<version>1.2.0</version>
 				<configuration>
 					<resolver>p2</resolver>
 					<pomDependencies>consider</pomDependencies>
@@ -168,7 +181,7 @@
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-p2-director-plugin</artifactId>
-				<version>1.0.0</version>
+				<version>1.2.0</version>
 				<executions>
 					<execution>
 						<id>materialize-products</id>
