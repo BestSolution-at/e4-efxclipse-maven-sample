@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: at.bestsolution.efxclipse.eclipse:org.apache.felix.scr:2.0.14.v20180822-1822">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/eclipse/org.apache.felix.scr/2.0.14.v20180822-1822/org.apache.felix.scr-2.0.14.v20180822-1822.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/eclipse/org.apache.felix.scr/2.0.14.v20180822-1822/org.apache.felix.scr-2.0.14.v20180822-1822-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/eclipse/org.apache.felix.scr/2.0.14.v20180822-1822/org.apache.felix.scr-2.0.14.v20180822-1822-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

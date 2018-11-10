@@ -52,7 +52,7 @@
 						<!--property>
 							<name>efxclipse.osgi.hook.debug</name>
 							<value>true</value>
-						</property -->
+						</property-->
 						<property>
 							<name>java.library.path</name>
 							<value>UNKNOWN</value>

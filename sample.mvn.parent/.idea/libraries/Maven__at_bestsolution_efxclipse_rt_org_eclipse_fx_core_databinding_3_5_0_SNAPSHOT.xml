@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: at.bestsolution.efxclipse.rt:org.eclipse.fx.core.databinding:3.5.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/rt/org.eclipse.fx.core.databinding/3.5.0-SNAPSHOT/org.eclipse.fx.core.databinding-3.5.0-20181110.141527-34.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/rt/org.eclipse.fx.core.databinding/3.5.0-SNAPSHOT/org.eclipse.fx.core.databinding-3.5.0-20181110.141527-34-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/rt/org.eclipse.fx.core.databinding/3.5.0-SNAPSHOT/org.eclipse.fx.core.databinding-3.5.0-20181110.141527-34-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

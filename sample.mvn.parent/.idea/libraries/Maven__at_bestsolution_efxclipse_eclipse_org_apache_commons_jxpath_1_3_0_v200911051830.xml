@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: at.bestsolution.efxclipse.eclipse:org.apache.commons.jxpath:1.3.0.v200911051830">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/eclipse/org.apache.commons.jxpath/1.3.0.v200911051830/org.apache.commons.jxpath-1.3.0.v200911051830.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/eclipse/org.apache.commons.jxpath/1.3.0.v200911051830/org.apache.commons.jxpath-1.3.0.v200911051830-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/eclipse/org.apache.commons.jxpath/1.3.0.v200911051830/org.apache.commons.jxpath-1.3.0.v200911051830-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

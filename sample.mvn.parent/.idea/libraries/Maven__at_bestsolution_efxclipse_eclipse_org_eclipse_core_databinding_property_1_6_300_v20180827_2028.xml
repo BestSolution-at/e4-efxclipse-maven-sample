@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: at.bestsolution.efxclipse.eclipse:org.eclipse.core.databinding.property:1.6.300.v20180827-2028">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/eclipse/org.eclipse.core.databinding.property/1.6.300.v20180827-2028/org.eclipse.core.databinding.property-1.6.300.v20180827-2028.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/eclipse/org.eclipse.core.databinding.property/1.6.300.v20180827-2028/org.eclipse.core.databinding.property-1.6.300.v20180827-2028-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/eclipse/org.eclipse.core.databinding.property/1.6.300.v20180827-2028/org.eclipse.core.databinding.property-1.6.300.v20180827-2028-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

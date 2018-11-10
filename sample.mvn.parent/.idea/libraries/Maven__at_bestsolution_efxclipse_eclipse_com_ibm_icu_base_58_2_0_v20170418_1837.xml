@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: at.bestsolution.efxclipse.eclipse:com.ibm.icu.base:58.2.0.v20170418-1837">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/eclipse/com.ibm.icu.base/58.2.0.v20170418-1837/com.ibm.icu.base-58.2.0.v20170418-1837.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/eclipse/com.ibm.icu.base/58.2.0.v20170418-1837/com.ibm.icu.base-58.2.0.v20170418-1837-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/eclipse/com.ibm.icu.base/58.2.0.v20170418-1837/com.ibm.icu.base-58.2.0.v20170418-1837-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

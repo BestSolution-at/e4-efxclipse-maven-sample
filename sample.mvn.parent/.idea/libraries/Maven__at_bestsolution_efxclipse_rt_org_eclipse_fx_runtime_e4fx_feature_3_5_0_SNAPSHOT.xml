@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: at.bestsolution.efxclipse.rt:org.eclipse.fx.runtime.e4fx.feature:3.5.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/rt/org.eclipse.fx.runtime.e4fx.feature/3.5.0-SNAPSHOT/org.eclipse.fx.runtime.e4fx.feature-3.5.0-20181110.141909-12.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/rt/org.eclipse.fx.runtime.e4fx.feature/3.5.0-SNAPSHOT/org.eclipse.fx.runtime.e4fx.feature-3.5.0-20181110.141909-12-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/rt/org.eclipse.fx.runtime.e4fx.feature/3.5.0-SNAPSHOT/org.eclipse.fx.runtime.e4fx.feature-3.5.0-20181110.141909-12-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

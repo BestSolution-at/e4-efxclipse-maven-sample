@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: at.bestsolution.efxclipse.eclipse:com.google.guava:21.0.0.v20170206-1425">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/eclipse/com.google.guava/21.0.0.v20170206-1425/com.google.guava-21.0.0.v20170206-1425.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/eclipse/com.google.guava/21.0.0.v20170206-1425/com.google.guava-21.0.0.v20170206-1425-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/eclipse/com.google.guava/21.0.0.v20170206-1425/com.google.guava-21.0.0.v20170206-1425-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

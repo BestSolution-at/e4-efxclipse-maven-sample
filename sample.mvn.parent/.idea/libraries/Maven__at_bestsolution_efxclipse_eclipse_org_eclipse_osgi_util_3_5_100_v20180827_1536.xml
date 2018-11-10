@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: at.bestsolution.efxclipse.eclipse:org.eclipse.osgi.util:3.5.100.v20180827-1536">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/eclipse/org.eclipse.osgi.util/3.5.100.v20180827-1536/org.eclipse.osgi.util-3.5.100.v20180827-1536.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/eclipse/org.eclipse.osgi.util/3.5.100.v20180827-1536/org.eclipse.osgi.util-3.5.100.v20180827-1536-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/eclipse/org.eclipse.osgi.util/3.5.100.v20180827-1536/org.eclipse.osgi.util-3.5.100.v20180827-1536-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: at.bestsolution.efxclipse.eclipse:org.apache.commons.lang:2.6.0.v201404270220">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/eclipse/org.apache.commons.lang/2.6.0.v201404270220/org.apache.commons.lang-2.6.0.v201404270220.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/eclipse/org.apache.commons.lang/2.6.0.v201404270220/org.apache.commons.lang-2.6.0.v201404270220-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/at/bestsolution/efxclipse/eclipse/org.apache.commons.lang/2.6.0.v201404270220/org.apache.commons.lang-2.6.0.v201404270220-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
