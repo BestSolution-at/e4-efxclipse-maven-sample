@@ -22,108 +22,22 @@
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>at.bestsolution.efxclipse.rt</groupId>
-			<artifactId>org.eclipse.fx.osgi</artifactId>
-			<version>${efx-org.eclipse.fx.osgi}</version>
+			<groupId>at.bestsolution.efxclipse.eclipse</groupId>
+			<artifactId>javax.annotation</artifactId>
+			<version>${efx-javax.annotation}</version>
 		</dependency>
 		<dependency>
 			<groupId>at.bestsolution.efxclipse.rt</groupId>
-			<artifactId>org.eclipse.fx.runtime.e4fx.feature</artifactId>
-			<version>${efx-org.eclipse.fx.runtime.e4fx.feature.feature.group}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.openjfx</groupId>
-  			<artifactId>javafx-controls</artifactId>
-  			<version>11</version>
-  			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<groupId>at.bestsolution.openjfx</groupId>
-			<version>11.0.0</version>
-			<artifactId>openjfx.standard.feature</artifactId>
+			<artifactId>org.eclipse.fx.ui.theme</artifactId>
+			<version>${efx-org.eclipse.fx.ui.theme}</version>
 		</dependency>
 		
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-controls</artifactId>
+			<version>11</version>
+			<scope>compile</scope>
+		</dependency>
 	</dependencies>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>at.bestsolution</groupId>
-				<artifactId>maven-osgi-exec-plugin</artifactId>
-				<configuration>
-					<programArguments>
-						<programArgument>-console</programArgument>
-						<programArgument>-consoleLog</programArgument>
-						<programArgument>-product</programArgument>
-						<programArgument>sample.mvn.app.product</programArgument>
-						<programArgument>-clearPersistedState</programArgument>
-						<programArgument>-clean</programArgument>
-					</programArguments>
-					<vmProperties>
-						<property>
-							<name>osgi.framework.extensions</name>
-							<value>org.eclipse.fx.osgi</value>
-						</property>
-						<!-- property>
-							<name>efxclipse.osgi.hook.debug</name>
-							<value>true</value>
-						</property -->
-						<property>
-							<name>java.library.path</name>
-							<value>UNKNOWN</value>
-						</property>
-					</vmProperties>
-					<startLevels>
-						<org.eclipse.core.runtime>0</org.eclipse.core.runtime>
-						<org.eclipse.equinox.common>2</org.eclipse.equinox.common>
-						<org.eclipse.equinox.ds>2</org.eclipse.equinox.ds>
-						<org.eclipse.equinox.event>2</org.eclipse.equinox.event>
-						<org.eclipse.equinox.simpleconfigurator>1</org.eclipse.equinox.simpleconfigurator>
-						<org.eclipse.osgi>-1</org.eclipse.osgi>
-					</startLevels>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
-
-	<profiles>
-		<profile>
-			<id>netbeans</id>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>at.bestsolution</groupId>
-						<artifactId>maven-osgi-exec-plugin</artifactId>
-						<executions>
-							<execution>
-								<phase>test</phase>
-								<goals>
-									<goal>exec-osgi</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-		<profile>
-			<id>intellij</id>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>at.bestsolution</groupId>
-						<artifactId>maven-osgi-exec-plugin</artifactId>
-						<executions>
-							<execution>
-								<phase>test</phase>
-								<goals>
-									<goal>exec-osgi-java</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
 </project>

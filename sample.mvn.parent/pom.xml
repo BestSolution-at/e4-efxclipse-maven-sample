@@ -24,6 +24,7 @@
 		<module>sample.mvn.feature</module>
 		<module>sample.mvn.product</module>
 
+		<module>launch</module>
 	</modules>
 
 
