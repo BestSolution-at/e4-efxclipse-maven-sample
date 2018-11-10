@@ -77,6 +77,10 @@
 							<name>efxclipse.osgi.hook.debug</name>
 							<value>true</value>
 						</property>
+						<property>
+							<name>java.library.path</name>
+							<value>UNKNOWN</value>
+						</property>
 					</vmProperties>
 					<startLevels>
 						<org.eclipse.core.runtime>0</org.eclipse.core.runtime>
