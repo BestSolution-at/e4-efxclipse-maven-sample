@@ -35,21 +35,12 @@
 			<groupId>org.openjfx</groupId>
   			<artifactId>javafx-controls</artifactId>
   			<version>11</version>
+  			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>at.bestsolution.openjfx</groupId>
 			<version>11.0.0</version>
-			<artifactId>openjfx.base</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>at.bestsolution.openjfx</groupId>
-			<version>11.0.0</version>
-			<artifactId>openjfx.controls</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>at.bestsolution.openjfx</groupId>
-			<version>11.0.0</version>
-			<artifactId>openjfx.graphics.${efx.platform}</artifactId>
+			<artifactId>openjfx.standard.feature</artifactId>
 		</dependency>
 		
 	</dependencies>
@@ -73,10 +64,10 @@
 							<name>osgi.framework.extensions</name>
 							<value>org.eclipse.fx.osgi</value>
 						</property>
-						<property>
+						<!-- property>
 							<name>efxclipse.osgi.hook.debug</name>
 							<value>true</value>
-						</property>
+						</property -->
 						<property>
 							<name>java.library.path</name>
 							<value>UNKNOWN</value>
