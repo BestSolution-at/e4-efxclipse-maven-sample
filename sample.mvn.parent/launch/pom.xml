@@ -49,7 +49,7 @@
 							<name>osgi.framework.extensions</name>
 							<value>org.eclipse.fx.osgi</value>
 						</property>
-						<!-- property>
+						<!--property>
 							<name>efxclipse.osgi.hook.debug</name>
 							<value>true</value>
 						</property -->
@@ -98,6 +98,7 @@
 					<plugin>
 						<groupId>at.bestsolution</groupId>
 						<artifactId>maven-osgi-exec-plugin</artifactId>
+                                                 <version>0.0.2-SNAPSHOT</version>
 						<executions>
 							<execution>
 								<phase>test</phase>

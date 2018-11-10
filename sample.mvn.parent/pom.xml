@@ -45,7 +45,6 @@
 	</repositories>
 
 	<build>
-
 		<pluginManagement>
 			<plugins>
 				<plugin>
