@@ -37,6 +37,11 @@
 		</dependency>
 		<dependency>
 			<groupId>at.bestsolution.efxclipse.rt</groupId>
+			<artifactId>org.eclipse.equinox.executable</artifactId>
+			<version>3.8.100-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>at.bestsolution.efxclipse.rt</groupId>
 			<artifactId>org.eclipse.fx.runtime.e4fx.feature</artifactId>
 			<version>${efx-org.eclipse.fx.runtime.e4fx.feature.feature.group}</version>
 		</dependency>
@@ -98,7 +103,7 @@
 							<product>
 								<uid>sample.mvn.app.product</uid>
 								<id>sample.mvn.app.product</id>
-								<includeLaunchers>false</includeLaunchers>
+								<includeLaunchers>true</includeLaunchers>
 								<name>Sample</name>
 								<application>org.eclipse.fx.ui.workbench.fx.application</application>
 								<version>1.0.0</version>
@@ -111,10 +116,6 @@
 										<property>
 											<name>org.osgi.framework.bundle.parent</name>
 											<value>ext</value>
-										</property>
-										<property>
-											<name>efxclipse.java-modules.dir</name>
-											<value>/Users/tomschindl/Downloads/javafx-sdk-11/lib</value>
 										</property>
 										<property>
 											<name>osgi.framework.extensions</name>
