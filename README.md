@@ -12,7 +12,7 @@ user@host> mvn dependency:get -Dartifact=at.bestsolution:tycho-lifecycle-control
  -DrepoUrl=http://maven.bestsolution.at/efxclipse-snapshots/
 user@host> https://github.com/BestSolution-at/e4-efxclipse-maven-sample.git
 user@host> cd e4-efxclipse-maven-sample/sample.mvn.parent
-user@host> mvn clean install
+user@host> mvn clean package
 ```
 
 ## Compile from IDE's without Maven extension support
