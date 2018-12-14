@@ -57,6 +57,10 @@
 							<name>java.library.path</name>
 							<value>UNKNOWN</value>
 						</property>
+						<property>
+							<name>detachdrag.enabled</name>
+							<value>true</value>
+						</property>
 					</vmProperties>
 					<startLevels>
 						<org.eclipse.core.runtime>0</org.eclipse.core.runtime>
