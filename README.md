@@ -10,6 +10,8 @@ To build the final product you need to preinstall an extension who reconfigures 
 ```bash
 user@host> mvn dependency:get -Dartifact=at.bestsolution:tycho-lifecycle-controller:0.0.2-SNAPSHOT \
  -DrepoUrl=http://maven.bestsolution.at/efxclipse-snapshots/
+user@host> mvn dependency:get -Dartifact=at.bestsolution:maven-osgi-targetplatform-extension:0.0.2-SNAPSHOT \ 
+ -DrepoUrl=http://maven.bestsolution.at/efxclipse-snapshots/
 user@host> https://github.com/BestSolution-at/e4-efxclipse-maven-sample.git
 user@host> cd e4-efxclipse-maven-sample/sample.mvn.parent
 user@host> mvn clean package
