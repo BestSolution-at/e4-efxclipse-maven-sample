@@ -4,6 +4,8 @@ Bundle-ActivationPolicy: lazy
 
 Import-Package: \
 	!javafx.*, \
-	*
+    *
 -runee: JavaSE-1.8
 -exportcontents: sample.mvn.lib
+
+Export-Package: *
