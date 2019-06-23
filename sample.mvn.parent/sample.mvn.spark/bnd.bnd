@@ -1,0 +1,13 @@
+-noee: true
+-snapshot: ${osgi.qualifier}
+Bundle-ActivationPolicy: lazy
+
+Import-Package: \
+    org.apache.spark.*, \
+    org.osgeo.proj4j.*
+
+Export-Package: \
+    org.apache.spark.*, \
+    org.osgeo.proj4j.*
+
+-runee: JavaSE-1.8
