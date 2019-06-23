@@ -1,221 +1,219 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>sample.mvn</groupId>
-		<artifactId>sample.mvn.parent</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-	</parent>
-	<groupId>sample.mvn.product</groupId>
-	<artifactId>sample.mvn.product</artifactId>
-	<packaging>eclipse-repository</packaging>
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>sample.mvn</groupId>
+        <artifactId>sample.mvn.parent</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <groupId>sample.mvn.product</groupId>
+    <artifactId>sample.mvn.product</artifactId>
+    <packaging>eclipse-repository</packaging>
 
-	<properties>
-		<p2.repo.location>${project.build.directory}/source-repository</p2.repo.location>
-	</properties>
+    <properties>
+        <p2.repo.location>${project.build.directory}/source-repository</p2.repo.location>
+    </properties>
 
-	<repositories>
-		<repository>
-			<id>app-repo</id>
-			<layout>p2</layout>
-			<url>file:${p2.repo.location}</url>
-		</repository>
+    <repositories>
+        <repository>
+            <id>app-repo</id>
+            <layout>p2</layout>
+            <url>file:${p2.repo.location}</url>
+        </repository>
 
-	</repositories>
+    </repositories>
 
-	<dependencies>
-		<dependency>
-			<groupId>sample.mvn</groupId>
-			<artifactId>sample.mvn.feature</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>at.bestsolution.openjfx</groupId>
-			<version>11.0.0</version>
-			<artifactId>openjfx.standard.feature</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>at.bestsolution.efxclipse.rt</groupId>
-			<artifactId>org.eclipse.equinox.executable</artifactId>
-			<version>3.8.100-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>at.bestsolution.efxclipse.rt</groupId>
-			<artifactId>org.eclipse.fx.runtime.e4fx.feature</artifactId>
-			<version>${efx-org.eclipse.fx.runtime.e4fx.feature.feature.group}</version>
-		</dependency>
-	</dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>sample.mvn</groupId>
+            <artifactId>sample.mvn.feature</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>at.bestsolution.openjfx</groupId>
+            <version>11.0.0</version>
+            <artifactId>openjfx.standard.feature</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>at.bestsolution.efxclipse.rt</groupId>
+            <artifactId>org.eclipse.equinox.executable</artifactId>
+            <version>3.8.100-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>at.bestsolution.efxclipse.rt</groupId>
+            <artifactId>org.eclipse.fx.runtime.e4fx.feature</artifactId>
+            <version>${efx-org.eclipse.fx.runtime.e4fx.feature.feature.group}</version>
+        </dependency>
+    </dependencies>
 
-	<!-- ===================================== Build Section ============================================================== -->
+    <!-- ===================================== Build Section ============================================================== -->
 
-	<profiles>
-		<profile>
-			<id>startApp</id>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>at.bestsolution</groupId>
-						<artifactId>maven-osgi-exec-plugin</artifactId>
-						<executions>
-							<execution>
-								<phase>process-classes</phase>
-								<goals>
-									<goal>exec-osgi-java</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
+    <profiles>
+        <profile>
+            <id>startApp</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>at.bestsolution</groupId>
+                        <artifactId>maven-osgi-exec-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <phase>process-classes</phase>
+                                <goals>
+                                    <goal>exec-osgi-java</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
-	<build>
-
-
-		<plugins>
-
-			<plugin>
-				<groupId>biz.aQute.bnd</groupId>
-				<artifactId>bnd-maven-plugin</artifactId>
-				<configuration>
-					<skip>true</skip>
-				</configuration>
-			</plugin>
-
-			<!-- Creates a product file which is used by Tycho to build configurations 
-				used for the startable product -->
-			<plugin>
-				<groupId>at.bestsolution</groupId>
-				<artifactId>maven-osgi-package-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>create-product</id>
-						<goals>
-							<goal>package-product</goal>
-						</goals>
-						<configuration>
-							<!-- TODO: Build directory can not yet be used because there is no 
-								option known to say Tycho that the .product file is not in the project root 
-								directory -->
-							<!--<projectDir>${project.build.directory}</projectDir> -->
-							<product>
-								<uid>sample.mvn.app.product</uid>
-								<id>sample.mvn.app.product</id>
-								<includeLaunchers>true</includeLaunchers>
-								<name>Sample</name>
-								<application>org.eclipse.fx.ui.workbench.fx.application</application>
-								<version>1.0.0</version>
-								<useFeatures>true</useFeatures>
-								<launcherArgs>
-									<programArguments>
-										<programArgument>-nosplash</programArgument>
-									</programArguments>
-									<vmProperties>
-										<property>
-											<name>org.osgi.framework.bundle.parent</name>
-											<value>ext</value>
-										</property>
-										<property>
-											<name>osgi.framework.extensions</name>
-											<value>org.eclipse.fx.osgi</value>
-										</property>
-										<property>
-											<name>efxclipse.osgi.hook.debug</name>
-											<value>true</value>
-										</property>
-									</vmProperties>
-								</launcherArgs>
-								<startLevels>
-									<org.eclipse.core.runtime>0</org.eclipse.core.runtime>
-									<org.eclipse.equinox.common>2</org.eclipse.equinox.common>
-									<org.eclipse.equinox.ds>2</org.eclipse.equinox.ds>
-									<org.eclipse.equinox.event>2</org.eclipse.equinox.event>
-									<org.eclipse.equinox.simpleconfigurator>1</org.eclipse.equinox.simpleconfigurator>
-									<org.eclipse.osgi>-1</org.eclipse.osgi>
-									<org.eclipse.gemini.blueprint.extender>3</org.eclipse.gemini.blueprint.extender>
-									<!-- TODO: this is still ugly. Need a better way to mark the bundle 
-										as "to start" -->
-									<service-impl>4</service-impl>
-								</startLevels>
-							</product>
-						</configuration>
-					</execution>
-					<!-- Generates the p2-repository which is used by the tycho plugins 
-						below -->
-					<execution>
-						<id>create-p2-repo</id>
-						<goals>
-							<goal>package-p2-repo</goal>
-						</goals>
-						<phase>prepare-package</phase>
-						<configuration>
-							<repositoryLocation>${p2.repo.location}</repositoryLocation>
-						</configuration>
-					</execution>
-				</executions>
-
-			</plugin>
+    <build>
 
 
-			<!-- Tycho stuff to materializes the product in the structure that is 
-				startable for a certain environment -->
-			<plugin>
-				<groupId>org.eclipse.tycho</groupId>
-				<artifactId>tycho-maven-plugin</artifactId>
-				<version>1.2.0</version>
-				<extensions>true</extensions>
-			</plugin>
+        <plugins>
 
-			<plugin>
-				<groupId>org.eclipse.tycho</groupId>
-				<artifactId>target-platform-configuration</artifactId>
-				<version>1.2.0</version>
-				<configuration>
-					<resolver>p2</resolver>
-					<pomDependencies>consider</pomDependencies>
-					<environments>
-						<environment>
-							<os>win32</os>
-							<ws>win32</ws>
-							<arch>x86_64</arch>
-						</environment>
-						<environment>
-							<os>macosx</os>
-							<ws>cocoa</ws>
-							<arch>x86_64</arch>
-						</environment>
-						<environment>
-							<os>linux</os>
-							<ws>gtk</ws>
-							<arch>x86_64</arch>
-						</environment>
-					</environments>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.eclipse.tycho</groupId>
-				<artifactId>tycho-p2-director-plugin</artifactId>
-				<version>1.2.0</version>
-				<executions>
-					<execution>
-						<id>materialize-products</id>
-						<goals>
-							<goal>materialize-products</goal>
-						</goals>
+            <plugin>
+                <groupId>biz.aQute.bnd</groupId>
+                <artifactId>bnd-maven-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+
+            <!-- Creates a product file which is used by Tycho to build configurations
+                used for the startable product -->
+            <plugin>
+                <groupId>at.bestsolution</groupId>
+                <artifactId>maven-osgi-package-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>create-product</id>
+                        <goals>
+                            <goal>package-product</goal>
+                        </goals>
+                        <configuration>
+                            <!-- TODO: Build directory can not yet be used because there is no
+                                option known to say Tycho that the .product file is not in the project root
+                                directory -->
+                            <!--<projectDir>${project.build.directory}</projectDir> -->
+                            <product>
+                                <uid>sample.mvn.app.product</uid>
+                                <id>sample.mvn.app.product</id>
+                                <includeLaunchers>true</includeLaunchers>
+                                <name>Sample</name>
+                                <application>org.eclipse.fx.ui.workbench.fx.application</application>
+                                <version>1.0.0</version>
+                                <useFeatures>true</useFeatures>
+                                <launcherArgs>
+                                    <programArguments>
+                                        <programArgument>-nosplash</programArgument>
+                                    </programArguments>
+                                    <vmProperties>
+                                        <property>
+                                            <name>org.osgi.framework.bundle.parent</name>
+                                            <value>ext</value>
+                                        </property>
+                                        <property>
+                                            <name>osgi.framework.extensions</name>
+                                            <value>org.eclipse.fx.osgi</value>
+                                        </property>
+                                        <property>
+                                            <name>efxclipse.osgi.hook.debug</name>
+                                            <value>true</value>
+                                        </property>
+                                    </vmProperties>
+                                </launcherArgs>
+                                <startLevels>
+                                    <org.eclipse.core.runtime>0</org.eclipse.core.runtime>
+                                    <org.eclipse.equinox.common>2</org.eclipse.equinox.common>
+                                    <org.eclipse.equinox.ds>2</org.eclipse.equinox.ds>
+                                    <org.eclipse.equinox.event>2</org.eclipse.equinox.event>
+                                    <org.eclipse.equinox.simpleconfigurator>1</org.eclipse.equinox.simpleconfigurator>
+                                    <org.eclipse.osgi>-1</org.eclipse.osgi>
+                                    <org.eclipse.gemini.blueprint.extender>3</org.eclipse.gemini.blueprint.extender>
+                                    <!-- TODO: this is still ugly. Need a better way to mark the bundle
+                                        as "to start" -->
+                                    <service-impl>4</service-impl>
+                                </startLevels>
+                            </product>
+                        </configuration>
+                    </execution>
+                    <!-- Generates the p2-repository which is used by the tycho plugins
+                        below -->
+                    <execution>
+                        <id>create-p2-repo</id>
+                        <goals>
+                            <goal>package-p2-repo</goal>
+                        </goals>
+                        <phase>prepare-package</phase>
+                        <configuration>
+                            <repositoryLocation>${p2.repo.location}</repositoryLocation>
+                        </configuration>
+                    </execution>
+                </executions>
+
+            </plugin>
 
 
-					</execution>
-					<execution>
-						<id>archive-products</id>
-						<goals>
-							<goal>archive-products</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
+            <!-- Tycho stuff to materializes the product in the structure that is
+                startable for a certain environment -->
+            <plugin>
+                <groupId>org.eclipse.tycho</groupId>
+                <artifactId>tycho-maven-plugin</artifactId>
+                <version>1.2.0</version>
+                <extensions>true</extensions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.eclipse.tycho</groupId>
+                <artifactId>target-platform-configuration</artifactId>
+                <version>1.2.0</version>
+                <configuration>
+                    <resolver>p2</resolver>
+                    <pomDependencies>consider</pomDependencies>
+                    <environments>
+                        <environment>
+                            <os>win32</os>
+                            <ws>win32</ws>
+                            <arch>x86_64</arch>
+                        </environment>
+                        <environment>
+                            <os>macosx</os>
+                            <ws>cocoa</ws>
+                            <arch>x86_64</arch>
+                        </environment>
+                        <environment>
+                            <os>linux</os>
+                            <ws>gtk</ws>
+                            <arch>x86_64</arch>
+                        </environment>
+                    </environments>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.eclipse.tycho</groupId>
+                <artifactId>tycho-p2-director-plugin</artifactId>
+                <version>1.2.0</version>
+                <executions>
+                    <execution>
+                        <id>materialize-products</id>
+                        <goals>
+                            <goal>materialize-products</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>archive-products</id>
+                        <goals>
+                            <goal>archive-products</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

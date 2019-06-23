@@ -3,6 +3,7 @@ package sample.mvn.lib;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.sql.SparkSession;
+import org.osgeo.proj4j.ProjCoordinate;
 
 import java.util.Arrays;
 import java.util.List;
@@ -15,9 +16,12 @@ public class HelloWorldHelper {
         JavaRDD<Integer> rdd = sc.parallelize(collection, 2);
         System.out.println("Number of partitions : " + rdd.getNumPartitions());
 
+        org.osgeo.proj4j.ProjCoordinate coord = new ProjCoordinate();
+        coord.setValue(19, 20);
+
         LombokPojo pojo = new LombokPojo();
         pojo.setAge("12");
         pojo.setName("deineMudda");
-        System.err.println("Hello World from Helper!!");
+        System.err.println("Hello World from Helper!!   " + pojo + " " + coord);
     }
 }
