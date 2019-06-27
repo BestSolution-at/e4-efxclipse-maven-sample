@@ -9,29 +9,91 @@
     <artifactId>sample.mvn.spark</artifactId>
     <dependencies>
         <dependency>
-            <groupId>org.osgeo</groupId>
-            <artifactId>proj4j</artifactId>
-            <version>0.1.0</version>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.16</version>
         </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.26</version>
+        </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>org.osgeo</groupId>-->
+        <!--            <artifactId>proj4j</artifactId>-->
+        <!--            <version>0.1.0</version>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.scala-lang</groupId>-->
+        <!--            <artifactId>scala-compiler</artifactId>-->
+        <!--            <version>2.12.8</version>-->
+        <!--            <exclusions>-->
+        <!--                <exclusion>-->
+        <!--                    <groupId>org.scala-lang.modules</groupId>-->
+        <!--                    <artifactId>scala-xml_2.12</artifactId>-->
+        <!--                </exclusion>-->
+        <!--            </exclusions>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.scala-lang</groupId>-->
+        <!--            <artifactId>scala-reflect</artifactId>-->
+        <!--            <version>2.12.8</version>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.scala-lang</groupId>-->
+        <!--            <artifactId>scala-library</artifactId>-->
+        <!--            <version>2.12.8</version>-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-core_2.11</artifactId>
-            <version>2.4.3</version>
+            <version>2.4.2</version>
         </dependency>
-        <!--        <dependency>-->
-        <!--            <groupId>org.apache.spark</groupId>-->
-        <!--            <artifactId>spark-sql_2.11</artifactId>-->
-        <!--            <version>2.4.3</version>-->
-        <!--        </dependency>-->
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-sql_2.11</artifactId>
+            <version>2.4.2</version>
+        </dependency>
         <!--        <dependency>-->
         <!--            <groupId>org.apache.spark</groupId>-->
         <!--            <artifactId>spark-streaming-kafka_2.11</artifactId>-->
         <!--            <version>1.6.3</version>-->
         <!--        </dependency>-->
-        <!--        <dependency>-->
-        <!--            <groupId>org.apache.spark</groupId>-->
-        <!--            <artifactId>spark-sql-kafka-0-10_2.11</artifactId>-->
-        <!--            <version>2.4.3</version>-->
-        <!--        </dependency>-->
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-sql-kafka-0-10_2.11</artifactId>
+            <version>2.4.2</version>
+        </dependency>
     </dependencies>
+    <!--    <build>-->
+    <!--        <plugins>-->
+    <!--            <plugin>-->
+    <!--                <groupId>org.scala-tools</groupId>-->
+    <!--                <artifactId>maven-scala-plugin</artifactId>-->
+    <!--                <version>2.15.2</version>-->
+    <!--                <executions>-->
+    <!--                    <execution>-->
+    <!--                        <id>compile</id>-->
+    <!--                        <goals>-->
+    <!--                            <goal>compile</goal>-->
+    <!--                        </goals>-->
+    <!--                        <phase>compile</phase>-->
+    <!--                    </execution>-->
+    <!--                    <execution>-->
+    <!--                        <id>test-compile</id>-->
+    <!--                        <goals>-->
+    <!--                            <goal>testCompile</goal>-->
+    <!--                        </goals>-->
+    <!--                        <phase>test-compile</phase>-->
+    <!--                    </execution>-->
+    <!--                    <execution>-->
+    <!--                        <phase>process-resources</phase>-->
+    <!--                        <goals>-->
+    <!--                            <goal>compile</goal>-->
+    <!--                        </goals>-->
+    <!--                    </execution>-->
+    <!--                </executions>-->
+    <!--            </plugin>-->
+    <!--        </plugins>-->
+    <!--    </build>-->
 </project>

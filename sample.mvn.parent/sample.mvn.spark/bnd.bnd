@@ -3,11 +3,25 @@
 Bundle-ActivationPolicy: lazy
 
 Import-Package: \
-    org.apache.spark.*, \
-    org.osgeo.proj4j.*
+    scala.*, \
+    !org.apache.hadoop.hive.*, \
+    org.apache.hadoop.*, \
+    org.apache.spark.*
 
 Export-Package: \
-    org.apache.spark.*, \
-    org.osgeo.proj4j.*
+    scala.*, \
+    com.codahale.*, \
+    com.esotericsoftware.*, \
+    com.google.*, \
+    com.twitter.*, \
+    org.json4s.*, \
+    com.fasterxml.*, \
+    com.thoughtworks.*, \
+    io.netty.*, \
+    org.slf4j.*, \
+    org.apache.*, \
+    javax.servlet.*, \
+    org.antlr.*, \
+    org.spark_project.*
 
 -runee: JavaSE-1.8
