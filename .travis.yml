@@ -1,0 +1,9 @@
+language: java
+
+imatrix:
+  include:
+    - os: osx
+      osx_image: xcode9.3
+
+script: 
+ - bash ./install.sh
