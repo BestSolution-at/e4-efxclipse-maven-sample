@@ -7,93 +7,93 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <artifactId>sample.mvn.spark</artifactId>
-    <dependencies>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.16</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <version>1.7.26</version>
-        </dependency>
-        <!--        <dependency>-->
-        <!--            <groupId>org.osgeo</groupId>-->
-        <!--            <artifactId>proj4j</artifactId>-->
-        <!--            <version>0.1.0</version>-->
-        <!--        </dependency>-->
-        <!--        <dependency>-->
-        <!--            <groupId>org.scala-lang</groupId>-->
-        <!--            <artifactId>scala-compiler</artifactId>-->
-        <!--            <version>2.12.8</version>-->
-        <!--            <exclusions>-->
-        <!--                <exclusion>-->
-        <!--                    <groupId>org.scala-lang.modules</groupId>-->
-        <!--                    <artifactId>scala-xml_2.12</artifactId>-->
-        <!--                </exclusion>-->
-        <!--            </exclusions>-->
-        <!--        </dependency>-->
-        <!--        <dependency>-->
-        <!--            <groupId>org.scala-lang</groupId>-->
-        <!--            <artifactId>scala-reflect</artifactId>-->
-        <!--            <version>2.12.8</version>-->
-        <!--        </dependency>-->
-        <!--        <dependency>-->
-        <!--            <groupId>org.scala-lang</groupId>-->
-        <!--            <artifactId>scala-library</artifactId>-->
-        <!--            <version>2.12.8</version>-->
-        <!--        </dependency>-->
-        <dependency>
-            <groupId>org.apache.spark</groupId>
-            <artifactId>spark-core_2.11</artifactId>
-            <version>2.4.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.spark</groupId>
-            <artifactId>spark-sql_2.11</artifactId>
-            <version>2.4.2</version>
-        </dependency>
-        <!--        <dependency>-->
-        <!--            <groupId>org.apache.spark</groupId>-->
-        <!--            <artifactId>spark-streaming-kafka_2.11</artifactId>-->
-        <!--            <version>1.6.3</version>-->
-        <!--        </dependency>-->
-        <dependency>
-            <groupId>org.apache.spark</groupId>
-            <artifactId>spark-sql-kafka-0-10_2.11</artifactId>
-            <version>2.4.2</version>
-        </dependency>
-    </dependencies>
-    <!--    <build>-->
-    <!--        <plugins>-->
-    <!--            <plugin>-->
-    <!--                <groupId>org.scala-tools</groupId>-->
-    <!--                <artifactId>maven-scala-plugin</artifactId>-->
-    <!--                <version>2.15.2</version>-->
-    <!--                <executions>-->
-    <!--                    <execution>-->
-    <!--                        <id>compile</id>-->
-    <!--                        <goals>-->
-    <!--                            <goal>compile</goal>-->
-    <!--                        </goals>-->
-    <!--                        <phase>compile</phase>-->
-    <!--                    </execution>-->
-    <!--                    <execution>-->
-    <!--                        <id>test-compile</id>-->
-    <!--                        <goals>-->
-    <!--                            <goal>testCompile</goal>-->
-    <!--                        </goals>-->
-    <!--                        <phase>test-compile</phase>-->
-    <!--                    </execution>-->
-    <!--                    <execution>-->
-    <!--                        <phase>process-resources</phase>-->
-    <!--                        <goals>-->
-    <!--                            <goal>compile</goal>-->
-    <!--                        </goals>-->
-    <!--                    </execution>-->
-    <!--                </executions>-->
-    <!--            </plugin>-->
-    <!--        </plugins>-->
-    <!--    </build>-->
+    <!--    <dependencies>-->
+    <!--        <dependency>-->
+    <!--            <groupId>org.slf4j</groupId>-->
+    <!--            <artifactId>slf4j-api</artifactId>-->
+    <!--            <version>1.7.16</version>-->
+    <!--        </dependency>-->
+    <!--        <dependency>-->
+    <!--            <groupId>org.slf4j</groupId>-->
+    <!--            <artifactId>slf4j-log4j12</artifactId>-->
+    <!--            <version>1.7.26</version>-->
+    <!--        </dependency>-->
+    <!--        &lt;!&ndash;        <dependency>&ndash;&gt;-->
+    <!--        &lt;!&ndash;            <groupId>org.osgeo</groupId>&ndash;&gt;-->
+    <!--        &lt;!&ndash;            <artifactId>proj4j</artifactId>&ndash;&gt;-->
+    <!--        &lt;!&ndash;            <version>0.1.0</version>&ndash;&gt;-->
+    <!--        &lt;!&ndash;        </dependency>&ndash;&gt;-->
+    <!--        &lt;!&ndash;        <dependency>&ndash;&gt;-->
+    <!--        &lt;!&ndash;            <groupId>org.scala-lang</groupId>&ndash;&gt;-->
+    <!--        &lt;!&ndash;            <artifactId>scala-compiler</artifactId>&ndash;&gt;-->
+    <!--        &lt;!&ndash;            <version>2.12.8</version>&ndash;&gt;-->
+    <!--        &lt;!&ndash;            <exclusions>&ndash;&gt;-->
+    <!--        &lt;!&ndash;                <exclusion>&ndash;&gt;-->
+    <!--        &lt;!&ndash;                    <groupId>org.scala-lang.modules</groupId>&ndash;&gt;-->
+    <!--        &lt;!&ndash;                    <artifactId>scala-xml_2.12</artifactId>&ndash;&gt;-->
+    <!--        &lt;!&ndash;                </exclusion>&ndash;&gt;-->
+    <!--        &lt;!&ndash;            </exclusions>&ndash;&gt;-->
+    <!--        &lt;!&ndash;        </dependency>&ndash;&gt;-->
+    <!--        &lt;!&ndash;        <dependency>&ndash;&gt;-->
+    <!--        &lt;!&ndash;            <groupId>org.scala-lang</groupId>&ndash;&gt;-->
+    <!--        &lt;!&ndash;            <artifactId>scala-reflect</artifactId>&ndash;&gt;-->
+    <!--        &lt;!&ndash;            <version>2.12.8</version>&ndash;&gt;-->
+    <!--        &lt;!&ndash;        </dependency>&ndash;&gt;-->
+    <!--        &lt;!&ndash;        <dependency>&ndash;&gt;-->
+    <!--        &lt;!&ndash;            <groupId>org.scala-lang</groupId>&ndash;&gt;-->
+    <!--        &lt;!&ndash;            <artifactId>scala-library</artifactId>&ndash;&gt;-->
+    <!--        &lt;!&ndash;            <version>2.12.8</version>&ndash;&gt;-->
+    <!--        &lt;!&ndash;        </dependency>&ndash;&gt;-->
+    <!--        <dependency>-->
+    <!--            <groupId>org.apache.spark</groupId>-->
+    <!--            <artifactId>spark-core_2.11</artifactId>-->
+    <!--            <version>2.4.2</version>-->
+    <!--        </dependency>-->
+    <!--        <dependency>-->
+    <!--            <groupId>org.apache.spark</groupId>-->
+    <!--            <artifactId>spark-sql_2.11</artifactId>-->
+    <!--            <version>2.4.2</version>-->
+    <!--        </dependency>-->
+    <!--        &lt;!&ndash;        <dependency>&ndash;&gt;-->
+    <!--        &lt;!&ndash;            <groupId>org.apache.spark</groupId>&ndash;&gt;-->
+    <!--        &lt;!&ndash;            <artifactId>spark-streaming-kafka_2.11</artifactId>&ndash;&gt;-->
+    <!--        &lt;!&ndash;            <version>1.6.3</version>&ndash;&gt;-->
+    <!--        &lt;!&ndash;        </dependency>&ndash;&gt;-->
+    <!--        <dependency>-->
+    <!--            <groupId>org.apache.spark</groupId>-->
+    <!--            <artifactId>spark-sql-kafka-0-10_2.11</artifactId>-->
+    <!--            <version>2.4.2</version>-->
+    <!--        </dependency>-->
+    <!--    </dependencies>-->
+    <!--    &lt;!&ndash;    <build>&ndash;&gt;-->
+    <!--    &lt;!&ndash;        <plugins>&ndash;&gt;-->
+    <!--    &lt;!&ndash;            <plugin>&ndash;&gt;-->
+    <!--    &lt;!&ndash;                <groupId>org.scala-tools</groupId>&ndash;&gt;-->
+    <!--    &lt;!&ndash;                <artifactId>maven-scala-plugin</artifactId>&ndash;&gt;-->
+    <!--    &lt;!&ndash;                <version>2.15.2</version>&ndash;&gt;-->
+    <!--    &lt;!&ndash;                <executions>&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    <execution>&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        <id>compile</id>&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        <goals>&ndash;&gt;-->
+    <!--    &lt;!&ndash;                            <goal>compile</goal>&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        </goals>&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        <phase>compile</phase>&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    </execution>&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    <execution>&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        <id>test-compile</id>&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        <goals>&ndash;&gt;-->
+    <!--    &lt;!&ndash;                            <goal>testCompile</goal>&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        </goals>&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        <phase>test-compile</phase>&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    </execution>&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    <execution>&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        <phase>process-resources</phase>&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        <goals>&ndash;&gt;-->
+    <!--    &lt;!&ndash;                            <goal>compile</goal>&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        </goals>&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    </execution>&ndash;&gt;-->
+    <!--    &lt;!&ndash;                </executions>&ndash;&gt;-->
+    <!--    &lt;!&ndash;            </plugin>&ndash;&gt;-->
+    <!--    &lt;!&ndash;        </plugins>&ndash;&gt;-->
+    <!--    &lt;!&ndash;    </build>&ndash;&gt;-->
 </project>
