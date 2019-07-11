@@ -8,13 +8,19 @@ in Netbeans and IntelliJ IDEA as well
 To build the final product you need to preinstall an extension who reconfigures tycho.
 
 ```bash
-user@host> mvn dependency:get -Dartifact=at.bestsolution:tycho-lifecycle-controller:0.0.2-SNAPSHOT \
- -DrepoUrl=http://maven.bestsolution.at/efxclipse-snapshots/
-user@host> mvn dependency:get -Dartifact=at.bestsolution:maven-osgi-targetplatform-extension:0.0.2-SNAPSHOT \ 
- -DrepoUrl=http://maven.bestsolution.at/efxclipse-snapshots/
+user@host> mvn dependency:get -Dartifact=at.bestsolution:tycho-lifecycle-controller:0.0.2-SNAPSHOT -DrepoUrl=http://maven.bestsolution.at/efxclipse-snapshots/
+user@host> mvn dependency:get -Dartifact=at.bestsolution:maven-osgi-targetplatform-extension:0.0.2-SNAPSHOT -DrepoUrl=http://maven.bestsolution.at/efxclipse-snapshots/
+user@host> mvn dependency:get -Dartifact=at.bestsolution:maven-osgi-package-plugin:0.0.2-SNAPSHOT -DrepoUrl=http://maven.bestsolution.at/efxclipse-snapshots/
+user@host> mvn dependency:get -Dartifact=at.bestsolution:maven-osgi-exec-plugin:0.0.2-SNAPSHOT -DrepoUrl=http://maven.bestsolution.at/efxclipse-snapshots/
 user@host> https://github.com/BestSolution-at/e4-efxclipse-maven-sample.git
 user@host> cd e4-efxclipse-maven-sample/sample.mvn.parent
+
 user@host> mvn clean package
+```
+
+You can run the product with the following statement:
+```
+user@host> mvn -f launch/pom.xml test -P netbeans
 ```
 
 ## Compile from IDE's without Maven extension support
