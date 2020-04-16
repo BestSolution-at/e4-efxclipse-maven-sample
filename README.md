@@ -12,7 +12,7 @@ user@host> mvn dependency:get -Dartifact=at.bestsolution:tycho-lifecycle-control
 user@host> mvn dependency:get -Dartifact=at.bestsolution:maven-osgi-targetplatform-extension:0.0.2-SNAPSHOT -DrepoUrl=http://maven.bestsolution.at/efxclipse-snapshots/
 user@host> mvn dependency:get -Dartifact=at.bestsolution:maven-osgi-package-plugin:0.0.2-SNAPSHOT -DrepoUrl=http://maven.bestsolution.at/efxclipse-snapshots/
 user@host> mvn dependency:get -Dartifact=at.bestsolution:maven-osgi-exec-plugin:0.0.2-SNAPSHOT -DrepoUrl=http://maven.bestsolution.at/efxclipse-snapshots/
-user@host> https://github.com/BestSolution-at/e4-efxclipse-maven-sample.git
+user@host> git clone https://github.com/BestSolution-at/e4-efxclipse-maven-sample.git
 user@host> cd e4-efxclipse-maven-sample/sample.mvn.parent
 
 user@host> mvn clean package
