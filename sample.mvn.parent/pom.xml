@@ -16,6 +16,7 @@
 	<properties>
 		<osgi.qualifier>${maven.build.timestamp}</osgi.qualifier>
 		<maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
 	<modules>
