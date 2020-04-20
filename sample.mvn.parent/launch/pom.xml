@@ -102,7 +102,7 @@
 					<plugin>
 						<groupId>at.bestsolution</groupId>
 						<artifactId>maven-osgi-exec-plugin</artifactId>
-                                                 <version>0.0.2-SNAPSHOT</version>
+                        <version>${equinox-maven-plugin-version}</version>
 						<executions>
 							<execution>
 								<phase>test</phase>

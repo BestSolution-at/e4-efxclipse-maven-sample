@@ -17,6 +17,7 @@
 		<osgi.qualifier>${maven.build.timestamp}</osgi.qualifier>
 		<maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<equinox-maven-plugin-version>0.0.3-SNAPSHOT</equinox-maven-plugin-version>
 	</properties>
 
 	<modules>
@@ -51,12 +52,12 @@
 				<plugin>
 					<groupId>at.bestsolution</groupId>
 					<artifactId>maven-osgi-exec-plugin</artifactId>
-					<version>0.0.2-SNAPSHOT</version>
+					<version>${equinox-maven-plugin-version}</version>
 				</plugin>
 				<plugin>
 					<groupId>at.bestsolution</groupId>
 					<artifactId>maven-osgi-package-plugin</artifactId>
-					<version>0.0.2-SNAPSHOT</version>
+					<version>${equinox-maven-plugin-version}</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>
