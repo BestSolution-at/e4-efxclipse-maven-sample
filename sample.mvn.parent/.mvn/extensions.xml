@@ -3,11 +3,11 @@
     <extension>
         <groupId>at.bestsolution</groupId>
         <artifactId>tycho-lifecycle-controller</artifactId>
-        <version>0.0.2-SNAPSHOT</version>
+        <version>0.0.3-SNAPSHOT</version>
     </extension>
 	<extension>
       	<groupId>at.bestsolution</groupId>
 	    <artifactId>maven-osgi-targetplatform-extension</artifactId>
-	    <version>0.0.2-SNAPSHOT</version>
+	    <version>0.0.3-SNAPSHOT</version>
     </extension>
 </extensions>
