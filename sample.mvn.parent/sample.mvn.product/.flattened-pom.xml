@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>sample.mvn.product</groupId>
+  <artifactId>sample.mvn.product</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>eclipse-repository</packaging>
+  <dependencies>
+    <dependency>
+      <groupId>sample.mvn</groupId>
+      <artifactId>sample.mvn.feature</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>at.bestsolution.openjfx</groupId>
+      <artifactId>openjfx.standard.feature</artifactId>
+      <version>11.0.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>at.bestsolution.efxclipse.rt</groupId>
+      <artifactId>org.eclipse.equinox.executable</artifactId>
+      <version>3.8.100-SNAPSHOT</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>at.bestsolution.efxclipse.rt</groupId>
+      <artifactId>org.eclipse.fx.runtime.e4fx.feature</artifactId>
+      <version>3.6.0.201907240201</version>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+  <repositories>
+    <repository>
+      <id>app-repo</id>
+      <url>file:/home/marcelo/git/e4-efxclipse-maven-sample/sample.mvn.parent/sample.mvn.product/target/source-repository</url>
+      <layout>p2</layout>
+    </repository>
+    <repository>
+      <id>efxclipse-releases</id>
+      <name>BestSolution e(fx)clipse releases</name>
+      <url>https://maven.bestsolution.at/efxclipse-releases/</url>
+    </repository>
+    <repository>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <id>efxclipse-snapshots</id>
+      <name>BestSolution e(fx)clipse snapshots</name>
+      <url>https://maven.bestsolution.at/efxclipse-snapshots/</url>
+    </repository>
+  </repositories>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-maven-plugin</artifactId>
+        <version>1.2.0</version>
+        <extensions>true</extensions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
