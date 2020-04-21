@@ -35,7 +35,7 @@
 		<dependency>
 			<groupId>at.bestsolution.openjfx</groupId>
 			<artifactId>openjfx.standard.feature</artifactId>
-			<version>${openjfx-openjfx.standard.feature-version}</version>
+			<version>${bestsolution-openjfx-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>at.bestsolution.efxclipse.rt</groupId>
