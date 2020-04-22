@@ -39,6 +39,7 @@ TODO
 ## Eclipse
 
 To run the application inside Eclipse you need to have at least e(fx)clipse 3.1.0 tooling installed who provides a new run-configuration type `MVN OSGi Launcher`.
+If you need to recreate the launcher, click on the browse button and select the `launch` module.
 
 ![Eclipse Launcher][eclipse-launch]
 
