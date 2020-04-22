@@ -35,19 +35,17 @@
 
 		<!-- OpenJFX Properties -->
 		<bestsolution-openjfx-version>11.0.0</bestsolution-openjfx-version>
-		<openjfx-javafx-controls-version>11</openjfx-javafx-controls-version>
+		<openjfx-javafx-controls-version>14.0.1</openjfx-javafx-controls-version>
 
 		<!-- Maven Properties -->
 		<maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
-		<maven.plugins-maven-compiler-plugin-version>3.8.0</maven.plugins-maven-compiler-plugin-version>
-		<maven.plugins-maven-jar-plugin.version>3.1.0</maven.plugins-maven-jar-plugin.version>
+		<maven.plugins-maven-compiler-plugin-version>3.8.1</maven.plugins-maven-compiler-plugin-version>
+		<maven.plugins-maven-jar-plugin.version>3.2.0</maven.plugins-maven-jar-plugin.version>
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
 
 		<!-- Tycho Properties -->
-		<tycho-target-platform-configuration-version>1.2.0</tycho-target-platform-configuration-version>
-		<tycho-tycho-maven-plugin-version>1.2.0</tycho-tycho-maven-plugin-version>
-		<tycho-tycho-p2-director-plugin-version>1.2.0</tycho-tycho-p2-director-plugin-version>
+		<tycho-version>1.6.0</tycho-version>
 	</properties>
 
 	<modules>
