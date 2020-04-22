@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>sample.mvn</groupId>
+  <artifactId>sample.mvn.parent</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <repositories>
+    <repository>
+      <id>efxclipse-releases</id>
+      <name>BestSolution e(fx)clipse releases</name>
+      <url>https://maven.bestsolution.at/efxclipse-releases/</url>
+    </repository>
+    <repository>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <id>efxclipse-snapshots</id>
+      <name>BestSolution e(fx)clipse snapshots</name>
+      <url>https://maven.bestsolution.at/efxclipse-snapshots/</url>
+    </repository>
+  </repositories>
+</project>

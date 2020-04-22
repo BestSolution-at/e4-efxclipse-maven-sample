@@ -1,13 +1,18 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>sample.mvn</groupId>
-    <artifactId>sample.mvn.parent</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
-  <artifactId>launch</artifactId>
-  
-  <dependencies>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+>
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>sample.mvn</groupId>
+		<artifactId>sample.mvn.parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>launch</artifactId>
+
+	<dependencies>
 		<dependency>
 			<groupId>at.bestsolution.efxclipse.rt</groupId>
 			<artifactId>org.eclipse.fx.osgi</artifactId>
@@ -25,12 +30,12 @@
 		</dependency>
 		<dependency>
 			<groupId>at.bestsolution.openjfx</groupId>
-			<version>11.0.0</version>
 			<artifactId>openjfx.standard.feature</artifactId>
+			<version>${bestsolution-openjfx-version}</version>
 		</dependency>
-  </dependencies>
-  
-  <build>
+	</dependencies>
+
+	<build>
 		<plugins>
 			<plugin>
 				<groupId>at.bestsolution</groupId>
@@ -49,10 +54,8 @@
 							<name>osgi.framework.extensions</name>
 							<value>org.eclipse.fx.osgi</value>
 						</property>
-						<!--property>
-							<name>efxclipse.osgi.hook.debug</name>
-							<value>true</value>
-						</property-->
+						<!--property> <name>efxclipse.osgi.hook.debug</name> <value>true</value> 
+							</property -->
 						<property>
 							<name>java.library.path</name>
 							<value>UNKNOWN</value>
@@ -102,7 +105,6 @@
 					<plugin>
 						<groupId>at.bestsolution</groupId>
 						<artifactId>maven-osgi-exec-plugin</artifactId>
-                        <version>${equinox-maven-plugin-version}</version>
 						<executions>
 							<execution>
 								<phase>test</phase>

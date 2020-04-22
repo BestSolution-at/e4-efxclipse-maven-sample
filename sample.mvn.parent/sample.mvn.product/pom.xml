@@ -1,12 +1,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+>
 	<modelVersion>4.0.0</modelVersion>
+
 	<parent>
 		<groupId>sample.mvn</groupId>
 		<artifactId>sample.mvn.parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
+
 	<groupId>sample.mvn.product</groupId>
 	<artifactId>sample.mvn.product</artifactId>
 	<packaging>eclipse-repository</packaging>
@@ -21,7 +24,6 @@
 			<layout>p2</layout>
 			<url>file:${p2.repo.location}</url>
 		</repository>
-
 	</repositories>
 
 	<dependencies>
@@ -32,13 +34,13 @@
 		</dependency>
 		<dependency>
 			<groupId>at.bestsolution.openjfx</groupId>
-			<version>11.0.0</version>
 			<artifactId>openjfx.standard.feature</artifactId>
+			<version>${bestsolution-openjfx-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>at.bestsolution.efxclipse.rt</groupId>
 			<artifactId>org.eclipse.equinox.executable</artifactId>
-			<version>3.8.100-SNAPSHOT</version>
+			<version>${efxclipse.rt-org.eclipse.equinox.executable-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>at.bestsolution.efxclipse.rt</groupId>
@@ -72,10 +74,7 @@
 	</profiles>
 
 	<build>
-
-
 		<plugins>
-
 			<plugin>
 				<groupId>biz.aQute.bnd</groupId>
 				<artifactId>bnd-maven-plugin</artifactId>
@@ -106,7 +105,7 @@
 								<includeLaunchers>true</includeLaunchers>
 								<name>Sample</name>
 								<application>org.eclipse.fx.ui.workbench.fx.application</application>
-								<version>1.0.0</version>
+								<version>${org.eclipse.fx.ui.workbench.fx.application-version}</version>
 								<useFeatures>true</useFeatures>
 								<launcherArgs>
 									<programArguments>
@@ -158,20 +157,18 @@
 
 			</plugin>
 
-
 			<!-- Tycho stuff to materializes the product in the structure that is 
 				startable for a certain environment -->
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-maven-plugin</artifactId>
-				<version>1.2.0</version>
+				<version>${tycho-version}</version>
 				<extensions>true</extensions>
 			</plugin>
-
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>target-platform-configuration</artifactId>
-				<version>1.2.0</version>
+				<version>${tycho-version}</version>
 				<configuration>
 					<resolver>p2</resolver>
 					<pomDependencies>consider</pomDependencies>
@@ -197,15 +194,13 @@
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-p2-director-plugin</artifactId>
-				<version>1.2.0</version>
+				<version>${tycho-version}</version>
 				<executions>
 					<execution>
 						<id>materialize-products</id>
 						<goals>
 							<goal>materialize-products</goal>
 						</goals>
-
-
 					</execution>
 					<execution>
 						<id>archive-products</id>
@@ -217,5 +212,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
