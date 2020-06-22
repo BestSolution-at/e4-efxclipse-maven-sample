@@ -38,7 +38,7 @@
 		<dependency>
 			<groupId>at.bestsolution.efxclipse.rt</groupId>
 			<artifactId>org.eclipse.equinox.executable</artifactId>
-			<version>3.8.100-SNAPSHOT</version>
+			<version>3.8.600-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>at.bestsolution.efxclipse.rt</groupId>
