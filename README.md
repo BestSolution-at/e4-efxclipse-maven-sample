@@ -10,11 +10,11 @@ Clone the git repository:
 
 and enter into the 'parent' folder:
 
-```user@host> cd e4-efxclipse-maven-sample/sample.mvn.parent```
+```user@host> cd e4-efxclipse-maven-sample/```
 
 To build the final product you need to preinstall an extension who reconfigures tycho. You could do that by either executing the provided initialization script:
 
-```user@host> ./initializeMavenRepo```
+```user@host> ./initializeMavenRepo.sh```
 
 or by executing the following tasks manually:
 
@@ -24,6 +24,7 @@ user@host> mvn dependency:get -Dartifact=at.bestsolution:maven-osgi-targetplatfo
 user@host> mvn dependency:get -Dartifact=at.bestsolution:maven-osgi-package-plugin:0.0.3-SNAPSHOT -DrepoUrl=http://maven.bestsolution.at/efxclipse-snapshots/
 user@host> mvn dependency:get -Dartifact=at.bestsolution:maven-osgi-exec-plugin:0.0.3-SNAPSHOT -DrepoUrl=http://maven.bestsolution.at/efxclipse-snapshots/=
 
+user@host> cd sample.mvn.parent
 user@host> mvn clean install
 ```
 
