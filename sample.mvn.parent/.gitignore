@@ -3,3 +3,4 @@ workspace/
 target/
 build/
 /.metadata/
+/.flattened-pom.xml
