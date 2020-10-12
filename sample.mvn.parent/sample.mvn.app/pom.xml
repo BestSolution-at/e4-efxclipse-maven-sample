@@ -31,7 +31,12 @@
 			<artifactId>org.eclipse.fx.ui.theme</artifactId>
 			<version>${efx-org.eclipse.fx.ui.theme}</version>
 		</dependency>
-		
+		<dependency>
+			<groupId>at.bestsolution.efxclipse.rt</groupId>
+			<artifactId>org.eclipse.fx.ui.controls</artifactId>
+			<version>${efx-org.eclipse.fx.ui.controls}</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.openjfx</groupId>
 			<artifactId>javafx-controls</artifactId>

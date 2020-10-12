@@ -45,6 +45,11 @@
 			<artifactId>org.eclipse.fx.runtime.e4fx.feature</artifactId>
 			<version>${efx-org.eclipse.fx.runtime.e4fx.feature.feature.group}</version>
 		</dependency>
+		<dependency>
+			<groupId>at.bestsolution.efxclipse.rt</groupId>
+			<artifactId>org.eclipse.fx.runtime.e4fx.p2.feature</artifactId>
+			<version>${efx-org.eclipse.fx.runtime.e4fx.p2.feature.feature.group}</version>
+		</dependency>
 	</dependencies>
 
 	<!-- ===================================== Build Section ============================================================== -->
