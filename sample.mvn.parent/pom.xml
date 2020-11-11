@@ -30,7 +30,7 @@
 		<!-- BestSolution/Efxclipse Properties -->
 		<bestsolution-maven-osgi-exec-plugin-version>0.0.3-SNAPSHOT</bestsolution-maven-osgi-exec-plugin-version>
 		<bestsolution-maven-osgi-package-plugin-version>0.0.3-SNAPSHOT</bestsolution-maven-osgi-package-plugin-version>
-		<efxclipse.rt-org.eclipse.equinox.executable-version>3.8.100-SNAPSHOT</efxclipse.rt-org.eclipse.equinox.executable-version>
+		<efxclipse.rt-org.eclipse.equinox.executable-version>3.8.600.v20191014-2025</efxclipse.rt-org.eclipse.equinox.executable-version>
 		<org.eclipse.fx.ui.workbench.fx.application-version>1.0.0</org.eclipse.fx.ui.workbench.fx.application-version>
 
 		<!-- OpenJFX Properties -->
