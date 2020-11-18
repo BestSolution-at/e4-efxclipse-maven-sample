@@ -34,8 +34,7 @@
 		<org.eclipse.fx.ui.workbench.fx.application-version>1.0.0</org.eclipse.fx.ui.workbench.fx.application-version>
 
 		<!-- OpenJFX Properties -->
-		<bestsolution-openjfx-version>11.0.0</bestsolution-openjfx-version>
-		<openjfx-javafx-controls-version>14.0.1</openjfx-javafx-controls-version>
+		<bestsolution-openjfx-version>15</bestsolution-openjfx-version>
 
 		<!-- Maven Properties -->
 		<maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>

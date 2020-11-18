@@ -17,7 +17,7 @@ import sample.mvn.lib.HelloWorldHelper;
 
 public class HelloMaven {
 //	JUtilLoggerFactory f;
-	
+
 	@PostConstruct
 	void init(BorderPane p) {
 //		Adapter a;
@@ -29,6 +29,7 @@ public class HelloMaven {
 
 	void handleButtonAction(ActionEvent e) {
 		System.err.println("Action: " + e);
+		System.err.println("Java-FX:" + System.getProperty("javafx.version"));
 		HelloWorldHelper.helloWorld();
 	}
 }
