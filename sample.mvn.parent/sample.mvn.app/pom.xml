@@ -25,8 +25,8 @@
 		</dependency>
 		<dependency>
 			<groupId>at.bestsolution.efxclipse.eclipse</groupId>
-			<artifactId>javax.annotation</artifactId>
-			<version>${efx-javax.annotation}</version>
+			<artifactId>jakarta.annotation-api</artifactId>
+			<version>${efx-jakarta.annotation-api}</version>
 		</dependency>
 		<dependency>
 			<groupId>at.bestsolution.efxclipse.rt</groupId>
@@ -38,13 +38,14 @@
 			<artifactId>org.eclipse.fx.ui.controls</artifactId>
 			<version>${efx-org.eclipse.fx.ui.controls}</version>
 		</dependency>
-
+		<!--
 		<dependency>
 			<groupId>org.openjfx</groupId>
 			<artifactId>javafx-controls</artifactId>
 			<version>${bestsolution-openjfx-version}</version>
 			<scope>compile</scope>
 		</dependency>
+		-->
 	</dependencies>
 
 </project>

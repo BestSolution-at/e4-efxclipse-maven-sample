@@ -1,0 +1,67 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>sample.mvn</groupId>
+		<artifactId>sample.mvn.parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+    <packaging>pom</packaging>
+	
+	<artifactId>sample.mvn.repo</artifactId>
+
+	<dependencies>
+		<dependency>
+			<groupId>sample.mvn</groupId>
+			<artifactId>sample.mvn.feature</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>at.bestsolution.efxclipse.rt</groupId>
+			<artifactId>org.eclipse.equinox.executable</artifactId>
+			<version>${efxclipse.rt-org.eclipse.equinox.executable-version}</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho.extras</groupId>
+				<artifactId>tycho-p2-extras-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<executions>
+					<execution>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>publish-features-and-bundles</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>at.bestsolution</groupId>
+				<artifactId>equinox-package-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>prepare-p2-repo</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<providerName>BestSolution.at</providerName>
+					<qualifier>${osgi.qualifier}</qualifier>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>biz.aQute.bnd</groupId>
+				<artifactId>bnd-maven-plugin</artifactId>
+				<version>${bnd-bnd-maven-plugin-version}</version>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

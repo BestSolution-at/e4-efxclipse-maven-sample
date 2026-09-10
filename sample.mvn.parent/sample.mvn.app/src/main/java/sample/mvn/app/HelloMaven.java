@@ -1,6 +1,6 @@
 package sample.mvn.app;
 
-import javax.annotation.PostConstruct;
+import jakarta.annotation.PostConstruct;
 
 // This is ok because packag is exported
 //import org.eclipse.e4.core.services.adapter.Adapter;
@@ -16,12 +16,12 @@ import sample.mvn.lib.HelloWorldHelper;
 //import sample.mvn.lib.internal.InternalAPI;
 
 public class HelloMaven {
-//	JUtilLoggerFactory f;
+	// JUtilLoggerFactory f;
 
 	@PostConstruct
 	void init(BorderPane p) {
-//		Adapter a;
-//		InternalAPI i;
+		// Adapter a;
+		// InternalAPI i;
 		Button b = new Button("Hello Maven!");
 		b.setOnAction(this::handleButtonAction);
 		p.setCenter(b);

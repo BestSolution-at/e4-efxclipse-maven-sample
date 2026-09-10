@@ -12,7 +12,7 @@
 	<parent>
 		<groupId>at.bestsolution.efxclipse.rt</groupId>
 		<artifactId>at.bestsolution.efxclipse.rt.release</artifactId>
-		<version>3.7.0</version>
+		<version>3.11</version>
 	</parent>
 
 	<properties>
@@ -20,7 +20,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 		<!-- External Tools Properties -->
-		<bnd-bnd-maven-plugin-version>5.0.1</bnd-bnd-maven-plugin-version>
+		<bnd-bnd-maven-plugin-version>7.4.0</bnd-bnd-maven-plugin-version>
 		<m2e-lifecycle-mapping-version>1.0.0</m2e-lifecycle-mapping-version>
 
 		<!-- OSGi Properties -->
@@ -28,9 +28,9 @@
 		<osgi.qualifier>${maven.build.timestamp}</osgi.qualifier>
 
 		<!-- BestSolution/Efxclipse Properties -->
-		<bestsolution-maven-osgi-exec-plugin-version>0.0.3-SNAPSHOT</bestsolution-maven-osgi-exec-plugin-version>
-		<bestsolution-maven-osgi-package-plugin-version>0.0.3-SNAPSHOT</bestsolution-maven-osgi-package-plugin-version>
-		<efxclipse.rt-org.eclipse.equinox.executable-version>3.8.600.v20191014-2025</efxclipse.rt-org.eclipse.equinox.executable-version>
+		<bestsolution-equinox-launch-maven-plugin-version>1.0.0-SNAPSHOT</bestsolution-equinox-launch-maven-plugin-version>
+		<bestsolution-equinox-package-maven-plugin-version>1.0.0-SNAPSHOT</bestsolution-equinox-package-maven-plugin-version>
+		<efxclipse.rt-org.eclipse.equinox.executable-version>3.8.2700.v20240929-1145</efxclipse.rt-org.eclipse.equinox.executable-version>
 		<org.eclipse.fx.ui.workbench.fx.application-version>1.0.0</org.eclipse.fx.ui.workbench.fx.application-version>
 
 		<!-- OpenJFX Properties -->
@@ -40,17 +40,18 @@
 		<maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
 		<maven.plugins-maven-compiler-plugin-version>3.8.1</maven.plugins-maven-compiler-plugin-version>
 		<maven.plugins-maven-jar-plugin.version>3.2.0</maven.plugins-maven-jar-plugin.version>
-		<maven.compiler.source>11</maven.compiler.source>
-		<maven.compiler.target>11</maven.compiler.target>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
 
 		<!-- Tycho Properties -->
-		<tycho-version>1.6.0</tycho-version>
+		<tycho-version>5.0.4</tycho-version>
 	</properties>
 
 	<modules>
 		<module>sample.mvn.app</module>
 		<module>sample.mvn.lib</module>
 		<module>sample.mvn.feature</module>
+		<module>sample.mvn.repo</module>
 		<module>sample.mvn.product</module>
 
 		<module>launch</module>
@@ -60,15 +61,7 @@
 		<repository>
 			<name>BestSolution e(fx)clipse releases</name>
 			<id>efxclipse-releases</id>
-			<url>https://maven.bestsolution.at/efxclipse-releases/</url>
-		</repository>
-		<repository>
-			<name>BestSolution e(fx)clipse snapshots</name>
-			<id>efxclipse-snapshots</id>
-			<url>https://maven.bestsolution.at/efxclipse-snapshots/</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
+			<url>https://maven.bestsolution.at/repos/efxclipse/releases/3.11/</url>
 		</repository>
 	</repositories>
 
@@ -77,45 +70,14 @@
 			<plugins>
 				<plugin>
 					<groupId>at.bestsolution</groupId>
-					<artifactId>maven-osgi-exec-plugin</artifactId>
-					<version>${bestsolution-maven-osgi-exec-plugin-version}</version>
+					<artifactId>equinox-package-maven-plugin</artifactId>
+					<version>${bestsolution-equinox-package-maven-plugin-version}</version>
 				</plugin>
 				<plugin>
 					<groupId>at.bestsolution</groupId>
-					<artifactId>maven-osgi-package-plugin</artifactId>
-					<version>${bestsolution-maven-osgi-package-plugin-version}</version>
+					<artifactId>equinox-launch-maven-plugin</artifactId>
+					<version>${bestsolution-equinox-launch-maven-plugin-version}</version>
 				</plugin>
-				<!--This plugin's configuration is used to store Eclipse m2e settings
-					only. It has no influence on the Maven build itself. -->
-				<!-- This breaks launching in Eclipse -->
-				<!--  plugin>
-					<groupId>org.eclipse.m2e</groupId>
-					<artifactId>lifecycle-mapping</artifactId>
-					<version>${m2e-lifecycle-mapping-version}</version>
-					<configuration>
-						<lifecycleMappingMetadata>
-							<pluginExecutions>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>biz.aQute.bnd</groupId>
-										<artifactId>
-											bnd-maven-plugin
-										</artifactId>
-										<versionRange>
-											[${bnd-bnd-maven-plugin-version},)
-										</versionRange>
-										<goals>
-											<goal>bnd-process</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore></ignore>
-									</action>
-								</pluginExecution>
-							</pluginExecutions>
-						</lifecycleMappingMetadata>
-					</configuration>
-				</plugin-->
 			</plugins>
 		</pluginManagement>
 
@@ -143,10 +105,6 @@
 				<version>${maven.plugins-maven-compiler-plugin-version}</version>
 			</plugin>
 
-			<!-- The following configuration is required because bnd-maven-plugin
-				generates the manifest to target/classes/META-INF/MANIFEST.MF but the normal
-				maven-jar-plugin does not use it. If the jar-plugin is patched to pick up
-				the manifest from this location, then the following config is not needed. -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
@@ -157,11 +115,6 @@
 					</archive>
 				</configuration>
 			</plugin>
-			<!-- plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-source-plugin</artifactId>
-				<executions> <execution> <id>attach-sources</id> <goals> <goal>jar</goal>
-				</goals> </execution> </executions> </plugin> <plugin> <groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId> <executions> <execution> <id>attach-javadocs</id>
-				<goals> <goal>jar</goal> </goals> </execution> </executions> </plugin -->
 		</plugins>
 	</build>
 

@@ -28,6 +28,7 @@
 			<artifactId>org.eclipse.fx.osgi</artifactId>
 			<version>${efx-org.eclipse.fx.osgi}</version>
 		</dependency>
+		<!--
 		<dependency>
 			<groupId>at.bestsolution.openjfx</groupId>
 			<artifactId>openjfx.base</artifactId>
@@ -53,13 +54,14 @@
 			<artifactId>openjfx.graphics.linux_64</artifactId>
 			<version>${bestsolution-openjfx-version}</version>
 		</dependency>
+		-->
 	</dependencies>
 
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>at.bestsolution</groupId>
-				<artifactId>maven-osgi-package-plugin</artifactId>
+				<artifactId>equinox-package-maven-plugin</artifactId>
 				<executions>
 					<execution>
 						<goals>

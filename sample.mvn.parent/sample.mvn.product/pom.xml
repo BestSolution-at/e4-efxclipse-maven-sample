@@ -15,7 +15,7 @@
 	<packaging>eclipse-repository</packaging>
 
 	<properties>
-		<p2.repo.location>${project.build.directory}/source-repository</p2.repo.location>
+		<p2.repo.location>${project.build.directory}/../../sample.mvn.repo/target/repository</p2.repo.location>
 	</properties>
 
 	<repositories>
@@ -31,11 +31,6 @@
 			<groupId>sample.mvn</groupId>
 			<artifactId>sample.mvn.feature</artifactId>
 			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>at.bestsolution.openjfx</groupId>
-			<artifactId>openjfx.standard.feature</artifactId>
-			<version>${bestsolution-openjfx-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>at.bestsolution.efxclipse.rt</groupId>
@@ -58,7 +53,7 @@
 				<plugins>
 					<plugin>
 						<groupId>at.bestsolution</groupId>
-						<artifactId>maven-osgi-exec-plugin</artifactId>
+						<artifactId>equinox-launch-maven-plugin</artifactId>
 						<executions>
 							<execution>
 								<phase>process-classes</phase>
@@ -87,7 +82,7 @@
 				used for the startable product -->
 			<plugin>
 				<groupId>at.bestsolution</groupId>
-				<artifactId>maven-osgi-package-plugin</artifactId>
+				<artifactId>equinox-package-maven-plugin</artifactId>
 				<executions>
 					<execution>
 						<id>create-product</id>
@@ -112,18 +107,6 @@
 										<programArgument>-nosplash</programArgument>
 									</programArguments>
 									<vmProperties>
-										<property>
-											<name>org.osgi.framework.bundle.parent</name>
-											<value>ext</value>
-										</property>
-										<property>
-											<name>osgi.framework.extensions</name>
-											<value>org.eclipse.fx.osgi</value>
-										</property>
-										<property>
-											<name>efxclipse.osgi.hook.debug</name>
-											<value>true</value>
-										</property>
 									</vmProperties>
 								</launcherArgs>
 								<startLevels>
@@ -141,20 +124,7 @@
 							</product>
 						</configuration>
 					</execution>
-					<!-- Generates the p2-repository which is used by the tycho plugins 
-						below -->
-					<execution>
-						<id>create-p2-repo</id>
-						<goals>
-							<goal>package-p2-repo</goal>
-						</goals>
-						<phase>prepare-package</phase>
-						<configuration>
-							<repositoryLocation>${p2.repo.location}</repositoryLocation>
-						</configuration>
-					</execution>
 				</executions>
-
 			</plugin>
 
 			<!-- Tycho stuff to materializes the product in the structure that is 
@@ -170,7 +140,6 @@
 				<artifactId>target-platform-configuration</artifactId>
 				<version>${tycho-version}</version>
 				<configuration>
-					<resolver>p2</resolver>
 					<pomDependencies>consider</pomDependencies>
 					<environments>
 						<environment>

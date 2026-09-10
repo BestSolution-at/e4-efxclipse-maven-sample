@@ -28,18 +28,13 @@
 			<artifactId>org.eclipse.fx.runtime.e4fx.feature</artifactId>
 			<version>${efx-org.eclipse.fx.runtime.e4fx.feature.feature.group}</version>
 		</dependency>
-		<dependency>
-			<groupId>at.bestsolution.openjfx</groupId>
-			<artifactId>openjfx.standard.feature</artifactId>
-			<version>${bestsolution-openjfx-version}</version>
-		</dependency>
 	</dependencies>
 
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>at.bestsolution</groupId>
-				<artifactId>maven-osgi-exec-plugin</artifactId>
+				<artifactId>equinox-launch-maven-plugin</artifactId>
 				<configuration>
 					<programArguments>
 						<programArgument>-console</programArgument>
@@ -50,10 +45,6 @@
 						<programArgument>-clean</programArgument>
 					</programArguments>
 					<vmProperties>
-						<property>
-							<name>osgi.framework.extensions</name>
-							<value>org.eclipse.fx.osgi</value>
-						</property>
 						<!--property> <name>efxclipse.osgi.hook.debug</name> <value>true</value> 
 							</property -->
 						<property>
@@ -68,7 +59,7 @@
 					<startLevels>
 						<org.eclipse.core.runtime>0</org.eclipse.core.runtime>
 						<org.eclipse.equinox.common>2</org.eclipse.equinox.common>
-						<org.eclipse.equinox.ds>2</org.eclipse.equinox.ds>
+						<org.apache.felix.scr>2</org.apache.felix.scr>
 						<org.eclipse.equinox.event>2</org.eclipse.equinox.event>
 						<org.eclipse.equinox.simpleconfigurator>1</org.eclipse.equinox.simpleconfigurator>
 						<org.eclipse.osgi>-1</org.eclipse.osgi>
@@ -85,7 +76,7 @@
 				<plugins>
 					<plugin>
 						<groupId>at.bestsolution</groupId>
-						<artifactId>maven-osgi-exec-plugin</artifactId>
+						<artifactId>equinox-launch-maven-plugin</artifactId>
 						<executions>
 							<execution>
 								<phase>test</phase>
@@ -104,7 +95,7 @@
 				<plugins>
 					<plugin>
 						<groupId>at.bestsolution</groupId>
-						<artifactId>maven-osgi-exec-plugin</artifactId>
+						<artifactId>equinox-launch-maven-plugin</artifactId>
 						<executions>
 							<execution>
 								<phase>test</phase>
